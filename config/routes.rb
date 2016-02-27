@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
+  root 'users#index'
 
- resources :vendors do
+  resources :users do
+    get 'checkout' => 'users#checkout'
+    get 'payment' => 'users#payment'
+  end
+
+  resources :vendors do
     collection do
       get :authenticate
       get :oauth_callback
     end
   end
-  # root to: 'vendors#index'
-
-  root 'users#index'
   
   resources :bitcoin_exchanges
 
@@ -82,4 +85,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end
