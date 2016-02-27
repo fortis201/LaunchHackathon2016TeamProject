@@ -1,3 +1,8 @@
 [o:Set:
+<<<<<<< HEAD
+@hash{
+I"environment-version:ETTI"environment-paths;TTI"Lprocessors:type=application/javascript&file_type=application/javascript;TTI"8file-digest://app/assets/javascripts/paymentForm.js;TTI"Zprocessors:type=application/javascript&file_type=application/javascript&pipeline=self;TT
+=======
 @hash}
 I"environment-version:ETTI"environment-paths;TTI"Lprocessors:type=application/javascript&file_type=application/javascript;TTI"8file-digest://app/assets/javascripts/paymentForm.js;TTI"Zprocessors:type=application/javascript&file_type=application/javascript&pipeline=self;TTF
+>>>>>>> a356bf5212536f23686e108bc0423e1f6c2b173c

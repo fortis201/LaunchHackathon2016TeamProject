@@ -24,13 +24,29 @@ class UsersController < ApplicationController
   end
 
   def payment
-    puts "in payment controller"
+
+    puts "Now in btCheckout controller method"
     puts params
-    redirect_to '/'
-    # if params.email
-    #   redirect_to '/'
-    # else
-    #   puts "cannot redirect because email is invalid."
+    # post "/checkout" do
+      nonce = params[:payment_method_nonce]
+      # Use payment method nonce here...
+      result = Braintree::Transaction.sale(
+        :amount => "10.00",
+        :payment_method_nonce => fake-valid-nonce,
+        :options => {
+          :submit_for_settlement => true
+        }
+      )
+      puts result
     # end
+
+    # puts "in payment controller"
+    # puts params
+    # redirect_to '/'
+    # # if params.email
+    # #   redirect_to '/'
+    # # else
+    # #   puts "cannot redirect because email is invalid."
+    # # end
   end
 end

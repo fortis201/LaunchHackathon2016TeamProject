@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
 
+ resources :vendors do
+    collection do
+      get :authenticate
+      get :oauth_callback
+    end
+  end
+  # root to: 'vendors#index'
+
   root 'users#index'
   
-  resources :vendors
   resources :bitcoin_exchanges
-  resources :users 
+
 
   get 'checkout' => 'users#checkout'
   get 'payment' => 'users#payment'
@@ -18,7 +25,7 @@ Rails.application.routes.draw do
   get 'payments/edit'
   get 'payments/update'
   get 'payments/destroy'
-  get 'payments/wepay'
+  get '/wepay' => 'payments#wepay'
   post '/btCheckout' => 'braintree#btCheckout'
 
   # The priority is based upon order of creation: first created -> highest priority.
