@@ -24,6 +24,7 @@ class UsersController < ApplicationController
   end
 
   def payment
+
     puts "in payment controller"
     puts params
     redirect_to '/'
