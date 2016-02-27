@@ -23,7 +23,7 @@ class PaymentsController < ApplicationController
     # Get the OAuth 2.0 authorization URL. Send the user to this URL to authorize
     # the application, then they will return to your `redirect_uri` with a code as
     # a GET parameter.
-    redirect_uri = "http://localhost:3000/checkout"
+    redirect_uri = "https://stage.wepay.com/v2/oauth2/authorize?client_id=157830&redirect_uri=http://127.0.0.1/&scope=manage_accounts,collect_payments,view_user,send_money,preapprove_payments,manage_subscriptions"
     redirect_to(wepay.oauth2_authorize_url(redirect_uri))
 
     # Once you have the OAuth 2.0 code, you can request an access token.
