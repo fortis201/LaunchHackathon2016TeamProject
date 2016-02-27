@@ -45,5 +45,6 @@ group :development do
   gem 'spring'
 end
 
-
-gem 'paypal-sdk-rest'
+gem 'quickbooks-ruby'
+gem 'oauth-plugin'
+# gem 'paypal-sdk-rest'

@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
 
-  resources :users do 
+ resources :vendors do
+    collection do
+      get :authenticate
+      get :oauth_callback
+    end
+  end
+  # root to: 'vendors#index'
+
+  resources :users
     root 'users#index'
     get 'checkout' => 'users#checkout'
     get 'payment' => 'users#payment'
-  end
 
-  resources :vendors
 
 
   # The priority is based upon order of creation: first created -> highest priority.
