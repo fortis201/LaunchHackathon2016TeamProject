@@ -5,3 +5,4 @@ This is our team submission for the Launch Hackathon 2016.
 #### Joseph Victor "J.V." Estolas
 #### Shain Lafazan
 #### Brandon In
+#### Michael Campos
