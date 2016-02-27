@@ -1,14 +1,14 @@
 (function paymentModal() {
 
-	// file = location.pathname.split( "/" ).pop();
+	file = location.pathname.split( "/" ).pop();
 
-	// link = document.createElement( "link" );
-	// // link.href = file.substr( 0, file.lastIndexOf( "." ) ) + ".css";
-	// link.href = "../stylesheets/modal.css";
-	// link.type = "text/css";
-	// link.rel = "stylesheet";
+	link = document.createElement( "link" );
+	// link.href = file.substr( 0, file.lastIndexOf( "." ) ) + ".css";
+	link.href = "../stylesheets/modal.css";
+	link.type = "text/css";
+	link.rel = "stylesheet";
 
-	// document.getElementsByTagName( "head" )[0].appendChild( link );
+	document.getElementsByTagName( "head" )[0].appendChild( link );
 
 	// TODO: 
 	// Make payemnt go to appropriate vendor
@@ -17,16 +17,13 @@
 	var 
 	pay = document.getElementById('pay'),
 	divOpen = "<div id='formModal'>",
-	formOpen = "<form type='POST' action='/payment' id='pmtForm'>",
 	closeButton = "<span id='close'>X</span>",
-	emailInput = "<input type='text' placeholder='Email Address' name='email' /><br>",
-	ccInput = "<input type='text' placeholder='Credit Card Number' name='ccNumber' /><br>",
-	cvvInput = "<input type='text' placeholder='CVV' name='cvv' /><br>",
-	submitButton = "<input type='submit' value='Submit' />",
+	formOpen = "<form id='checkout' method='post' action='/checkout'>",
+	ccInput = "<div id='payment-form'></div><br>",
+	submitButton = "<input type='submit' value='Submit'>",
 	formClose = "</form>",
 	divClose = "</div><br>",
-	checkoutBtn = "<button id='checkoutBtn'>Pay using our platform.</button>",
-	content = divOpen + formOpen + closeButton + emailInput + ccInput + cvvInput + submitButton + formClose + divClose + checkoutBtn;
+	content = divOpen + closeButton + formOpen + ccInput + submitButton + formClose + divClose;
 
 
 	// console.log(pay);

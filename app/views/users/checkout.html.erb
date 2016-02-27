@@ -1,16 +1,6 @@
 <h1>Checkout</h1>
 <div id="pay"></div>
 
-<div>
-
-	<form id="btCheckout" method="post" action="/payment">
-	  <div id="payment-form"></div>
-	  <input type="submit" value="Pay $10">
-	</form>
-
-	<%= javascript_include_tag "https://js.braintreegateway.com/js/braintree-2.21.0.min.js" %>
-	<%= javascript_include_tag "btPaymentScript" %>
-
-</div>
-
+<%= javascript_include_tag "https://js.braintreegateway.com/js/braintree-2.21.0.min.js" %>
+<script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script>
 <%= javascript_include_tag 'paymentForm' %>

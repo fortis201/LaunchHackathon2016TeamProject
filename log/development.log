@@ -15527,3 +15527,27 @@ NameError (undefined local variable or method `code' for #<PaymentsController:0x
   Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (161.6ms)
 =======
 >>>>>>> 14c2027cc1fd217510e5d312702f09e85bfa1d01
+
+
+Started GET "/wepay" for ::1 at 2016-02-27 08:29:07 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PaymentsController#wepay as HTML
+Redirected to https://stage.wepay.com/v2/oauth2/authorize?client_id=157830&redirect_uri=https://stage.wepay.com/v2/oauth2/authorize?client_id=157830&redirect_uri=http://127.0.0.1/&scope=manage_accounts,collect_payments,view_user,send_money,preapprove_payments,manage_subscriptions&scope=manage_accounts,collect_payments,view_user,send_money,preapprove_payments,manage_subscriptions
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `code' for #<PaymentsController:0x007fe4541606a8>):
+  app/controllers/payments_controller.rb:30:in `wepay'
+
+
+  Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.7ms)
+  Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (160.4ms)
+  Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (275.4ms)
