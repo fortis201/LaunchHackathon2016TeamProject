@@ -1,6 +1,6 @@
-// var hidden = "<input type='hidden' name='<%= request_forgery_protection_token %>' value='<%= form_authenticity_token %>'>"
-
 (function paymentModal() {
+
+	document.write('<script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script>');
 
 	file = location.pathname.split( "/" ).pop();
 
@@ -21,7 +21,6 @@
 	divOpen = "<div id='formModal'>",
 	closeButton = "<span id='close'>X</span>",
 	formOpen = "<div id='checkout'>",
-
 	ccInput = "<div id='payment-form'></div><br>",
 	submitButton = "<input type='submit' value='Submit'>",
 	formClose = "</div>",
@@ -62,6 +61,12 @@
 	        modal.style.display = "none";
 	    }
 	})
+
+	braintree.setup(
+		"<%= @token %>", 
+		"dropin", {
+	  container: "payment-form"
+	});
 
 
 
