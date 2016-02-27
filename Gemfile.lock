@@ -39,6 +39,8 @@ GEM
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    braintree (2.58.0)
+      builder (>= 2.0.0)
     builder (3.2.2)
     byebug (8.2.2)
     coffee-rails (4.1.1)
@@ -143,12 +145,14 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    wepay (0.2.2)
     xml-simple (1.1.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  braintree
   byebug
   coffee-rails (~> 4.1.0)
   coinbase
@@ -163,6 +167,7 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+  wepay
 
 BUNDLED WITH
    1.11.2

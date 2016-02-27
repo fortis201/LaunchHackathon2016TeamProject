@@ -18,7 +18,7 @@
 	pay = document.getElementById('pay'),
 	divOpen = "<div id='formModal'>",
 	formOpen = "<form type='POST' action='/payment' id='pmtForm'>",
-	closeButton = "<span id='close>x</span>",
+	closeButton = "<span id='close'>X</span>",
 	emailInput = "<input type='text' placeholder='Email Address' name='email' /><br>",
 	ccInput = "<input type='text' placeholder='Credit Card Number' name='ccNumber' /><br>",
 	cvvInput = "<input type='text' placeholder='CVV' name='cvv' /><br>",
@@ -26,10 +26,11 @@
 	formClose = "</form>",
 	divClose = "</div><br>",
 	checkoutBtn = "<button id='checkoutBtn'>Pay using our platform.</button>",
-	content = divOpen + formOpen + closeButton + emailInput + ccInput + cvvInput + submitButton + formClose + divClose
+	content = divOpen + formOpen + closeButton + emailInput + ccInput + cvvInput + submitButton + formClose + divClose + checkoutBtn;
 
 
-	pay.innerHTML = content + checkoutBtn;
+	// console.log(pay);
+	pay.innerHTML = content;
 
 
 	// Get the modal
@@ -48,17 +49,17 @@
 	})
 
 	// When the user clicks on <span> (x), close the modal
-	// span.addEventListener('click', function() {
-	// 	console.log("span clicked");
-	//     modal.style.display = "none";
-	// })
+	span.addEventListener('click', function() {
+		console.log("span clicked");
+	    modal.style.display = "none";
+	})
 
 	// When the user clicks anywhere outside of the modal, close it
-	// window.addEventListener('click', function(event) {
-	//     if (event.target == modal) {
-	//     	console.log("Clicked outside modal");
-	//         modal.style.display = "none";
-	//     }
-	// })
+	window.addEventListener('click', function(event) {
+	    if (event.target == modal) {
+	    	console.log("Clicked outside modal");
+	        modal.style.display = "none";
+	    }
+	})
 
 })()
