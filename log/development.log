@@ -7164,6 +7164,28 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 20ms (Views: 11.3ms | ActiveRecord: 0.0ms)
 
 
+<<<<<<< HEAD
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-27 00:13:58 -0800
+
+
+Started GET "/" for ::1 at 2016-02-27 07:05:27 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (29.6ms)
+Completed 200 OK in 89ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/vendors/new" for ::1 at 2016-02-27 07:07:02 -0800
+
+ActionController::RoutingError (uninitialized constant VendorsController):
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+=======
 Started GET "/checkout" for ::1 at 2016-02-27 01:25:37 -0800
 
 ActionController::RoutingError (No route matches [GET] "/checkout"):
@@ -13922,6 +13944,7 @@ AbstractController::ActionNotFound (The action 'show' could not be found for Use
   actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
   actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
   actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+>>>>>>> 7f864b77d5bddfd94095ee824945fd03c1c71d41
   actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
   actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
   actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
@@ -13967,6 +13990,107 @@ AbstractController::ActionNotFound (The action 'show' could not be found for Use
   rack (1.6.4) lib/rack/lock.rb:17:in `call'
   rack (1.6.4) lib/rack/content_length.rb:15:in `call'
   rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+<<<<<<< HEAD
+  /Users/MJCampos/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/MJCampos/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/MJCampos/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.4ms)
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.9ms)
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (61.9ms)
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (126.4ms)
+
+
+Started GET "/" for ::1 at 2016-02-27 07:08:22 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/MJCampos/.rvm/gems/ruby-2.2.2/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-02-27 07:08:42 -0800
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 596ms (Views: 596.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/modal.self-9b729de55b62b5be2b4cfe0856069055e07171f2f9b44bd929141950dc8e37da.css?body=1" for ::1 at 2016-02-27 07:08:43 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-27 07:08:43 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 07:08:43 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 07:08:43 -0800
+
+
+Started GET "/assets/paymentForm.self-1f31ec2d27e481d02dd9731f4bb96c7c4f9c9ae23b19d81d6b8a059ee73c080e.js?body=1" for ::1 at 2016-02-27 07:08:43 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-27 07:08:43 -0800
+
+
+Started GET "/users" for ::1 at 2016-02-27 07:09:23 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-02-27 07:09:57 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/modal.self-9b729de55b62b5be2b4cfe0856069055e07171f2f9b44bd929141950dc8e37da.css?body=1" for ::1 at 2016-02-27 07:09:58 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 07:09:58 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-27 07:09:58 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-27 07:09:58 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-27 07:09:58 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-27 07:09:58 -0800
+
+
+Started GET "/assets/paymentForm.self-1f31ec2d27e481d02dd9731f4bb96c7c4f9c9ae23b19d81d6b8a059ee73c080e.js?body=1" for ::1 at 2016-02-27 07:09:58 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 07:09:58 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-27 07:09:58 -0800
+
+
+Started GET "/" for ::1 at 2016-02-27 07:09:59 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2016-02-27 07:10:38 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+=======
   /Users/Shain/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
   /Users/Shain/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
   /Users/Shain/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
@@ -14899,6 +15023,7 @@ NoMethodError (undefined method `allow_forgery_protection' for "7ef636e41c782488
 =======
 >>>>>>> a356bf5212536f23686e108bc0423e1f6c2b173c
 >>>>>>> 7f864b77d5bddfd94095ee824945fd03c1c71d41
+<<<<<<< HEAD
 
 
 Started GET "/checkout" for ::1 at 2016-02-27 07:33:30 -0800
@@ -15400,3 +15525,5 @@ NameError (undefined local variable or method `code' for #<PaymentsController:0x
   Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
   Rendered /Users/jv-fortis201/.rvm/gems/ruby-2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (161.6ms)
+=======
+>>>>>>> 14c2027cc1fd217510e5d312702f09e85bfa1d01
