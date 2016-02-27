@@ -4,10 +4,9 @@ class BitcoinExchangesController < ApplicationController
 	
 	before_action :set_client
 	
-
-
 	def index
 		@accounts = @client.accounts
+		@price = @client.buy_price({currency: 'USD'})
 	end
 
 	def create
@@ -15,7 +14,13 @@ class BitcoinExchangesController < ApplicationController
 		account = @client.primary_account
 		payment_method = @client.payment_methods.first
 
-		account.buy({ :amount => "0.001", :currency => "BTC", :payment_method => payment_method.id })
+		@dollars_to_exchange = 12.00 # TODO : get from charge transaction
+
+		@price = @client.buy_price({currency: 'USD'})
+
+		@bitcoin_to_buy = @dollars_to_exchange / @price.amount
+
+		account.buy({ :amount => @bitcoin_to_buy, :currency => "BTC", :payment_method => payment_method.id })
 
 		redirect_to bitcoin_exchanges_path
 	end

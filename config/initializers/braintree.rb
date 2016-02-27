@@ -1,4 +1,4 @@
 Braintree::Configuration.environment = :sandbox
-Braintree::Configuration.merchant_id = "8mzgzs4th8ddkks8"
-Braintree::Configuration.public_key = "8b68q5s6f6tt96yb,                                                                                "               
-Braintree::Configuration.private_key = "7ef636e41c78248848b9c6e4b492d38a"
+Braintree::Configuration.merchant_id = "8myzxsgwhfpcrd9p"
+Braintree::Configuration.public_key = "6hq8pv5sxfrhshcg"             
+Braintree::Configuration.private_key = "c2424239585948322c91e5da322f6da4"
