@@ -1,5 +1,29 @@
 Rails.application.routes.draw do
 
+  get 'braintree/create'
+
+  get 'braintree/edit'
+
+  get 'braintree/update'
+
+  get 'braintree/destroy'
+
+  get 'braintree/getClientToken'
+
+  get 'braintree/config'
+
+  get 'payments/create'
+
+  get 'payments/edit'
+
+  get 'payments/update'
+
+  get 'payments/destroy'
+
+  get 'payments/wepay'
+
+  post '/btCheckout' => 'braintree#btCheckout'
+
   resources :users
   root 'users#index'
   get 'checkout' => 'users#checkout'
