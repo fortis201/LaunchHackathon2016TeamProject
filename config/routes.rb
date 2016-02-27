@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :users do 
-    root 'users#index'
-    get 'checkout' => 'users#checkout'
-    get 'payment' => 'users#payment'
-  end
+  resources :users
+  root 'users#index'
+  get 'checkout' => 'users#checkout'
+  get 'payment' => 'users#payment'
+
 
   resources :vendors
 
