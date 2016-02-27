@@ -18,9 +18,13 @@ class UsersController < ApplicationController
   end
 
   def checkout
+    # @clientToken = Braintree::ClientToken.generate
+    # puts "logging client token from users#checkout..."
+    # puts @clientToken
   end
 
   def payment
+<<<<<<< HEAD
 
     puts "\n \n\n\n\n\n"
     puts params
@@ -65,5 +69,15 @@ class UsersController < ApplicationController
 #     else
 #       @payment.error  # Error Hash
 #     end
+=======
+    puts "in payment controller"
+    puts params
+    redirect_to '/'
+    # if params.email
+    #   redirect_to '/'
+    # else
+    #   puts "cannot redirect because email is invalid."
+    # end
+>>>>>>> a356bf5212536f23686e108bc0423e1f6c2b173c
   end
 end

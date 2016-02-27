@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
  resources :vendors do
     collection do
       get :authenticate
@@ -13,7 +14,28 @@ Rails.application.routes.draw do
     get 'checkout' => 'users#checkout'
     get 'payment' => 'users#payment'
 
+=======
+  root 'users#index'
+  
+  resources :vendors
+  resources :bitcoin_exchanges
+  resources :users 
+>>>>>>> a356bf5212536f23686e108bc0423e1f6c2b173c
 
+  get 'checkout' => 'users#checkout'
+  get 'payment' => 'users#payment'
+  get 'braintree/create'
+  get 'braintree/edit'
+  get 'braintree/update'
+  get 'braintree/destroy'
+  get 'braintree/getClientToken'
+  get 'braintree/config'
+  get 'payments/create'
+  get 'payments/edit'
+  get 'payments/update'
+  get 'payments/destroy'
+  get 'payments/wepay'
+  post '/btCheckout' => 'braintree#btCheckout'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
