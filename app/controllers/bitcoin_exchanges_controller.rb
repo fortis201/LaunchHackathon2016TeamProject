@@ -10,14 +10,11 @@ class BitcoinExchangesController < ApplicationController
 	end
 
 	def create
-
 		account = @client.primary_account
 		payment_method = @client.payment_methods.first
 
-		@dollars_to_exchange = 12.00 # TODO : get from charge transaction
-
+		@dollars_to_exchange = 10.00 # TODO : get from charge transaction
 		@price = @client.buy_price({currency: 'USD'})
-
 		@bitcoin_to_buy = @dollars_to_exchange / @price.amount
 
 		account.buy({ :amount => @bitcoin_to_buy, :currency => "BTC", :payment_method => payment_method.id })
