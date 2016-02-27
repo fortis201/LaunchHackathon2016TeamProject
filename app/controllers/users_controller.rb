@@ -23,5 +23,10 @@ class UsersController < ApplicationController
   def payment
     puts "in payment controller";
     puts params;
+    if params.email
+      redirect_to '/'
+    else
+      puts "cannot redirect because email is invalid."
+    end
   end
 end

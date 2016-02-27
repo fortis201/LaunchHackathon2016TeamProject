@@ -1,15 +1,19 @@
 Rails.application.routes.draw do
 
-  resources :users
+  resources :users do 
+    root 'users#index'
+    get 'checkout' => 'users#checkout'
+    get 'payment' => 'users#payment'
+  end
 
-  get 'checkout' => 'users#checkout'
-  get 'payment' => 'users#payment'
+  resources :vendors
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#index'
+  # root 'users#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
