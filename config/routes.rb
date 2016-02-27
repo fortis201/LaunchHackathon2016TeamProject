@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  get "pos" => 'pos#calculator'
 
+  root 'users#index'
+  post '/create' => "users#create"
   resources :users do
     get 'checkout' => 'users#checkout'
     get 'payment' => 'users#payment'
