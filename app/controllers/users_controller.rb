@@ -1,10 +1,7 @@
 class UsersController < ApplicationController
-  def index
-    @token = Braintree::ClientToken.generate
-    puts "\n\n\n\n\n\n"
-    puts session[:invoice]
-    puts "\n\n\n\n\n\n"
+  skip_before_filter :verify_authenticity_token, :only => :payment
 
+  def index
   end
 
   def create
@@ -27,6 +24,26 @@ class UsersController < ApplicationController
   end
 
   def checkout
+    puts "/n/n/n/n"
+    puts "in checkout"
+    puts "/n/n/n/n"
+    Braintree::Configuration.environment = :sandbox
+    Braintree::Configuration.merchant_id = "8myzxsgwhfpcrd9p"
+    Braintree::Configuration.public_key = "6hq8pv5sxfrhshcg"             
+    Braintree::Configuration.private_key = "c2424239585948322c91e5da322f6da4"
+    @token = Braintree::ClientToken.generate
+    puts "/n/n/n/n"
+    puts @token
+    puts "/n/n/n/n"
+    # render :json => @token.to_json
+
+
+  end
+
+  def payment
+    puts "\n\n\n\n\n\n\n"
+    puts "Now in payment method!"
+    puts "\n\n\n\n\n\n\n"
     nonce = params[:payment_method_nonce]
     result = Braintree::Transaction.sale(
       :amount => session[:invoice],
@@ -39,17 +56,6 @@ class UsersController < ApplicationController
     puts result.transaction.amount
     puts "\n\n\n\n\n"
 
-  end
-
-  def payment
-
-    puts "in payment controller"
-    puts params
     redirect_to '/'
-    # if params.email
-    #   redirect_to '/'
-    # else
-    #   puts "cannot redirect because email is invalid."
-    # end
   end
 end

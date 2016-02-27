@@ -3,10 +3,9 @@ Rails.application.routes.draw do
 
   root 'users#index'
   post '/create' => "users#create"
-  resources :users do
-    get 'checkout' => 'users#checkout'
-    get 'payment' => 'users#payment'
-  end
+
+  resources :users
+  resources :bitcoin_exchanges
 
   resources :vendors do
     collection do
@@ -14,12 +13,12 @@ Rails.application.routes.draw do
       get :oauth_callback
     end
   end
+
+  post 'payment' => 'bitcoin_exchanges#payment'
   
-  resources :bitcoin_exchanges
-
-
-  post 'checkout' => 'users#checkout'
-  get 'payment' => 'users#payment'
+  get 'checkout' => 'bitcoin_exchanges#checkout'
+  get 'payment' => 'bitcoin_exchanges#payment'
+  
   get 'braintree/create'
   get 'braintree/edit'
   get 'braintree/update'
@@ -30,8 +29,6 @@ Rails.application.routes.draw do
   get 'payments/edit'
   get 'payments/update'
   get 'payments/destroy'
-  get 'payments/wepay'
-  post '/btCheckout' => 'braintree#btCheckout'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -24,7 +24,7 @@ class BraintreeController < ApplicationController
       nonce = params[:payment_method_nonce]
       # Use payment method nonce here...
       result = Braintree::Transaction.sale(
-        :amount => "100.00",
+        :amount => "10.00",
         :payment_method_nonce => fake-valid-nonce,
         :options => {
           :submit_for_settlement => true
@@ -33,4 +33,6 @@ class BraintreeController < ApplicationController
       puts result
     # end
   end
+
+
 end
