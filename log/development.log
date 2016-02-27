@@ -16041,3 +16041,290 @@ NoMethodError (undefined method `[]' for #<Braintree::SuccessfulResult:0x007f8a9
   Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
   Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (96.4ms)
+
+
+Started POST "/checkout" for ::1 at 2016-02-27 08:30:19 -0800
+Processing by UsersController#checkout as HTML
+  Parameters: {"authenticity_token"=>"JY7rvcK3U1uS4Ja6w5/36GgEUaTKYGKmf1zBRtQfZ61ygPTag+8QRZBwfCdGONW1o6kEo4PaE46aTX13txeCZw==", "payment_method_nonce"=>"92666dea-a738-4960-ad49-16a9de48e357"}
+  Rendered users/checkout.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 859ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-02-27 08:30:38 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 173ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/modal.self-e271f94c7fba1435883233a6df9bd496fcdb35198f2caee6b7f248e465f16850.css?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/braintree.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/scaffolds.self-e955b20a8f116da20219b7a333026bfeb34ef4365b00e890a70f7fe676052e68.css?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/bitcoin_exchanges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/bitcoin_exchanges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/braintree.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/btPaymentScript.self-475803da7be3c22af890cb63464422bdb7ab26ed1e1985b0e21939ef110162e1.js?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/paymentForm.self-470902daea6a2a1f2ff5c28a48cb3560b23974ba66ca3beff2a86d1e0eaf629c.js?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 08:30:39 -0800
+
+
+Started POST "/checkout" for ::1 at 2016-02-27 08:30:44 -0800
+Processing by UsersController#checkout as HTML
+  Parameters: {"authenticity_token"=>"8TgE82O3VgfPFtQqaOJRdnSfYeuBqSeb6jqs0/p4FvemNhuUIu8VGc2GPrftRXMrvzI07MgTVrMPKxDimXDzPQ==", "payment_method_nonce"=>"46b6a9d4-0271-4816-acec-d1dd0513d45b"}
+  Rendered users/checkout.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 507ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-02-27 08:31:10 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 187ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bitcoin_exchanges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/braintree.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/scaffolds.self-e955b20a8f116da20219b7a333026bfeb34ef4365b00e890a70f7fe676052e68.css?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/modal.self-e271f94c7fba1435883233a6df9bd496fcdb35198f2caee6b7f248e465f16850.css?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/bitcoin_exchanges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/braintree.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/btPaymentScript.self-475803da7be3c22af890cb63464422bdb7ab26ed1e1985b0e21939ef110162e1.js?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/paymentForm.self-470902daea6a2a1f2ff5c28a48cb3560b23974ba66ca3beff2a86d1e0eaf629c.js?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-27 08:31:10 -0800
+
+
+Started POST "/checkout" for ::1 at 2016-02-27 08:31:14 -0800
+Processing by UsersController#checkout as HTML
+  Parameters: {"authenticity_token"=>"rEj2zianKXqb8F4/Ehp5ktyzofchp1XiAMOGZTI1t0n7RumpZ/9qZJlgtKKXvVvPFx708GgdJMrl0jpUUT1Sgw==", "payment_method_nonce"=>"6008b93d-7c7d-4061-9d3d-754fdb08cfae"}
+  Rendered users/checkout.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 465ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-02-27 09:09:16 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 630ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/braintree.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 09:09:16 -0800
+
+
+Started GET "/assets/modal.self-e271f94c7fba1435883233a6df9bd496fcdb35198f2caee6b7f248e465f16850.css?body=1" for ::1 at 2016-02-27 09:09:16 -0800
+
+
+Started GET "/assets/scaffolds.self-e955b20a8f116da20219b7a333026bfeb34ef4365b00e890a70f7fe676052e68.css?body=1" for ::1 at 2016-02-27 09:09:16 -0800
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 09:09:16 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 09:09:16 -0800
+
+
+Started GET "/assets/bitcoin_exchanges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 09:09:16 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-27 09:09:16 -0800
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 09:09:16 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-27 09:09:16 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-27 09:09:16 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-27 09:09:16 -0800
+
+
+Started GET "/assets/braintree.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 09:09:17 -0800
+
+
+Started GET "/assets/btPaymentScript.self-475803da7be3c22af890cb63464422bdb7ab26ed1e1985b0e21939ef110162e1.js?body=1" for ::1 at 2016-02-27 09:09:17 -0800
+
+
+Started GET "/assets/paymentForm.self-470902daea6a2a1f2ff5c28a48cb3560b23974ba66ca3beff2a86d1e0eaf629c.js?body=1" for ::1 at 2016-02-27 09:09:17 -0800
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 09:09:17 -0800
+
+
+Started GET "/assets/bitcoin_exchanges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 09:09:17 -0800
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 09:09:17 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-27 09:09:17 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 09:09:17 -0800
+
+
+Started POST "/checkout" for ::1 at 2016-02-27 09:09:34 -0800
+Processing by UsersController#checkout as HTML
+  Parameters: {"authenticity_token"=>"k+si/UC2LqGS8sta9zf1L+x7Jza14lqAd/z0qj14h6XE5T2aAe5tv5BiIcdykNdyJ9ZyMfxYK6iS7UibXnBibw==", "payment_method_nonce"=>"65ade14f-96bb-4248-b2b5-cb11d53df936"}
+  Rendered users/checkout.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 848ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-02-27 09:09:47 -0800
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 195ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bitcoin_exchanges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/scaffolds.self-e955b20a8f116da20219b7a333026bfeb34ef4365b00e890a70f7fe676052e68.css?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/braintree.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/modal.self-e271f94c7fba1435883233a6df9bd496fcdb35198f2caee6b7f248e465f16850.css?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/bitcoin_exchanges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/braintree.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/btPaymentScript.self-475803da7be3c22af890cb63464422bdb7ab26ed1e1985b0e21939ef110162e1.js?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/paymentForm.self-470902daea6a2a1f2ff5c28a48cb3560b23974ba66ca3beff2a86d1e0eaf629c.js?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-27 09:09:48 -0800
+
+
+Started POST "/checkout" for ::1 at 2016-02-27 09:09:52 -0800
+Processing by UsersController#checkout as HTML
+  Parameters: {"authenticity_token"=>"bqzcWlcODvHbIkl0gS9BaYZDWOQawnhB+nKoUxYyF445osM9FlZN79myo+kEiGM0Te4N41N4CWkfYxRidTryRA==", "payment_method_nonce"=>"5f2af5f3-4da4-4415-8a65-669c423090eb"}
+  Rendered users/checkout.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 713ms (Views: 26.1ms | ActiveRecord: 0.0ms)

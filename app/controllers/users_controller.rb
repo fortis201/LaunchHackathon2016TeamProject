@@ -28,7 +28,7 @@ class UsersController < ApplicationController
       }
     )
     puts "\n\n\n\n\n"
-    puts result[:Braintree]
+    puts result.transaction.amount
     puts "\n\n\n\n\n"
 
   end
