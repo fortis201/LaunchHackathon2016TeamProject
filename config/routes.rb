@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   resources :users
 
+
+  resources :bitcoin_exchanges
+
   get 'checkout' => 'users#checkout'
   get 'payment' => 'users#payment'
 
