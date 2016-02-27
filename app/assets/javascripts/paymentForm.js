@@ -1,3 +1,5 @@
+// var hidden = "<input type='hidden' name='<%= request_forgery_protection_token %>' value='<%= form_authenticity_token %>'>"
+
 (function paymentModal() {
 
 	file = location.pathname.split( "/" ).pop();
@@ -18,13 +20,14 @@
 	pay = document.getElementById('pay'),
 	divOpen = "<div id='formModal'>",
 	closeButton = "<span id='close'>X</span>",
-	formOpen = "<form id='checkout' method='post' action='/checkout'>",
+	formOpen = "<div id='checkout'>",
+
 	ccInput = "<div id='payment-form'></div><br>",
 	submitButton = "<input type='submit' value='Submit'>",
-	formClose = "</form>",
+	formClose = "</div>",
 	divClose = "</div><br>",
-	checkoutBtn = "<button id='checkoutBtn'>Pay using our platform.</button>",
-	content = divOpen + closeButton + formOpen + ccInput + submitButton + formClose + divClose + checkoutBtn;
+	modalBtn = "<button id='checkoutBtn'>Pay using our platform.</button>",
+	content = divOpen + closeButton + formOpen + ccInput + submitButton + formClose + divClose + modalBtn;
 
 
 	// console.log(pay);
@@ -60,8 +63,6 @@
 	    }
 	})
 
-	braintree.setup(clientToken, "dropin", {
-	  container: "payment-form"
-	});
+
 
 })()
