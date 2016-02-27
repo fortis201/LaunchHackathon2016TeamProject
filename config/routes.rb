@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :bitcoin_exchanges
 
 
-  get 'checkout' => 'users#checkout'
+  post 'checkout' => 'users#checkout'
   get 'payment' => 'users#payment'
   get 'braintree/create'
   get 'braintree/edit'

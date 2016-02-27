@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def index
+    @token = Braintree::ClientToken.generate
   end
 
   def create
@@ -18,9 +19,18 @@ class UsersController < ApplicationController
   end
 
   def checkout
-    # @clientToken = Braintree::ClientToken.generate
-    # puts "logging client token from users#checkout..."
-    # puts @clientToken
+    nonce = params[:payment_method_nonce]
+    result = Braintree::Transaction.sale(
+      :amount => "100.00",
+      :payment_method_nonce => nonce,
+      :options => {
+        :submit_for_settlement => true
+      }
+    )
+    puts "\n\n\n\n\n"
+    puts result[:Braintree]
+    puts "\n\n\n\n\n"
+
   end
 
   def payment
