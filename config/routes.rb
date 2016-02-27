@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-<<<<<<< HEAD
  resources :vendors do
     collection do
       get :authenticate
@@ -9,18 +8,10 @@ Rails.application.routes.draw do
   end
   # root to: 'vendors#index'
 
-  resources :users
-    root 'users#index'
-    get 'checkout' => 'users#checkout'
-    get 'payment' => 'users#payment'
-
-=======
   root 'users#index'
   
-  resources :vendors
   resources :bitcoin_exchanges
-  resources :users 
->>>>>>> a356bf5212536f23686e108bc0423e1f6c2b173c
+
 
   get 'checkout' => 'users#checkout'
   get 'payment' => 'users#payment'
