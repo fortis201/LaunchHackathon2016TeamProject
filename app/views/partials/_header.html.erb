@@ -1,14 +1,18 @@
 <header id="header" class="alt">
-	<h1 id="logo"><%= link_to "Dollar Bank Club", root_path %></h1>
+	<% if session[:vendor_id] %>
+		<h1 id="logo"><%= link_to "Dollar Bank Club", vendor_path(session[:vendor_id]) %></h1>
+	<% else %>
+		<h1 id="logo"><%= link_to "Dollar Bank Club", root_path %></h1>
+	<% end %>
 	
 	<nav id="nav">
 		<ul>
 			<% if session[:vendor_id] %>
 				<li><%= Vendor.find_by(id: session[:vendor_id]).email %></li>
-				<li><%= link_to "Log out", logout_path, method:"delete" %></li>
+				<li><%= link_to "Log out", logout_path, method:"delete", class: "button special" %></li>
 			<% else %>
 				<li><a href="/login" class="button special">Log In</a></li>
-				<li><%= link_to "Sign Up", new_vendor_path %></li>
+				<li><%= link_to "Sign Up", new_vendor_path, class: "button special" %></li>
 			<% end %>
 		</ul>
 	</nav>
