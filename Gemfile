@@ -55,3 +55,6 @@ end
 gem 'quickbooks-ruby'
 gem 'oauth-plugin'
 # gem 'paypal-sdk-rest'
+
+# gem 'devise'
+# gem 'sinch_sms'
