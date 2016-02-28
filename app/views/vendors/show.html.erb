@@ -1,9 +1,6 @@
-<p id="notice"><%= notice %></p>
+<h1>Show page for Vendors</h1>
+<%= @vendor.id %>
+<%= @vendor.firstName %>
+<%= @vendor.lastName %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @vendor.name %>
-</p>
-
-<%= link_to 'Edit', edit_vendor_path(@vendor) %> |
-<%= link_to 'Back', vendors_path %>
+<h2>Sign out: <%= link_to "Log out", root_path %></h2>
