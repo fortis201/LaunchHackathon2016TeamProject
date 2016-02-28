@@ -1,9 +1,21 @@
-<h1>Checkout</h1>
-<div>
-<form id="pay" method='POST' action='/payment'>
+<div class="wrapper  ">
+	<h1>Checkout</h1>
 
-</form>
+	<div id='pay'></div>
 </div>
 
-
 <%= javascript_include_tag 'paymentForm' %>
+
+<script type="text/javascript">
+	console.log("test");
+	document.addEventListener("DOMContentLoaded", function () {
+		console.log("hello");
+		// console.log(renderPaymentModal);
+		// return renderPaymentModal('pay', 100, 'USD');
+	});
+</script>
+
+
+<script data-turbolinks-eval=false>
+	console.log("turbolinks eval false");
+</script>

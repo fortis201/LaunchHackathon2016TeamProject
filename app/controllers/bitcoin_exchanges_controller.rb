@@ -1,21 +1,17 @@
 require 'coinbase/wallet'
 
 class BitcoinExchangesController < ApplicationController
-	
 	skip_before_filter :verify_authenticity_token, :only => :payment
 	before_action :set_client
+
+	rescue_from Timeout::Error, :with => :rescue_from_timeout
 	
 	def index
 		@accounts = @client.accounts
 		@price = @client.buy_price({currency: 'USD'})
-
-
-		puts @client.inspect
-
 	end
 
 	def create
-		
 	end
 
   def checkout
@@ -59,7 +55,7 @@ class BitcoinExchangesController < ApplicationController
 		puts "\nTransferring " + @bitcoin_to_buy.to_s + "bitcoin to customer's wallet.\n"
 
   	@transaction = @client.primary_account.send({ 
-  		:to => 'srslafazan@gmail.com', 
+  		:to => 'fortis201@gmail.com', 
   		:amount => '0.001', 
   		:currency => 'BTC' })
 
@@ -70,6 +66,14 @@ class BitcoinExchangesController < ApplicationController
 
 		redirect_to bitcoin_exchanges_path(@bitcoin_exchange)
   end
+
+
+  protected
+
+	  def rescue_from_timeout(exception)
+	    puts "timeout: "
+	    puts exception
+	  end
 
 	private
 
@@ -84,5 +88,7 @@ class BitcoinExchangesController < ApplicationController
 		def exchange_params
 			params.require(:exchange).permit(:amount, :description)
 		end
+
+		rescue_from Timeout::Error, :with => :rescue_from_timeout
 
 end
