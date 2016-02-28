@@ -12,7 +12,7 @@
 				<li>
 					<% if session[:vendor_id] && Vendor.find_by(id: session[:vendor_id]) %>
 
-						<%= Vendor.find_by(id: session[:vendor_id]).email %>
+						<span style='color: black;'><%= Vendor.find_by(id: session[:vendor_id]).email %><span>
 
 					<% end %>
 				</li>
