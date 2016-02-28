@@ -1,4 +1,6 @@
 /tmp
-/tmp/*
+tmp/*
+tmp
 /log
-/log/*
+log/*
+log
