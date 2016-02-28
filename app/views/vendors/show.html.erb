@@ -1,6 +1,9 @@
-<h1>Show page for Vendors</h1>
-<%= @vendor.id %>
-<%= @vendor.firstName %>
-<%= @vendor.lastName %>
-
-<h2>Sign out: <%= link_to "Log out", root_path %></h2>
+<div id="vendorsShow">
+	<h1>Show page for Vendors</h1>
+	<%= @vendor.id %>
+	<%= @vendor.firstName %>
+	<%= @vendor.lastName %>
+	<%= session[:vendor_id] %>
+	
+	<h2>Sign out: <%= link_to "Log out", logout_path, method: "delete" %></h2>
+</div>

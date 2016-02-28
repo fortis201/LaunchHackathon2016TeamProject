@@ -26,14 +26,6 @@ Rails.application.routes.draw do
   
   get 'checkout' => 'bitcoin_exchanges#checkout'
   get 'payment' => 'bitcoin_exchanges#payment'
-  # get 'braintree/create'
-  # get 'braintree/edit'
-  # get 'braintree/update'
-  # get 'braintree/destroy'
-  # get 'braintree/getClientToken'
-  # get 'braintree/config'
-  # get 'payments/create'
-  # get 'payments/edit'
-  # get 'payments/update'
-  # get 'payments/destroy'
+ 
+  get 'documentation' => 'bitcoin_exchanges#documentation'
 end
