@@ -1,0 +1,18 @@
+<form id="checkout" method="post" action="/checkout">
+<%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %> 
+  <div id="payment-form"></div>
+  <input type="submit" value="Pay $<%= session[:invoice] %>">
+</form>
+
+<script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script>
+<script>
+// We generated a client token for you so you can test out this code
+// immediately. In a production-ready integration, you will need to
+// generate a client token on your server (see section below).
+
+braintree.setup(
+	"<%= @token %>", 
+	"dropin", {
+  container: "payment-form"
+});
+</script>
