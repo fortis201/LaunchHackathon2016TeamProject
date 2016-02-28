@@ -1,31 +1,46 @@
+<div class="container">
 <h1>Bitcoin Exchange #index</h1>
 
-<h2>Accounts</h2>
-<ul><% @accounts.each do |account| %>
-	<li><%= account.name %>: <%= account.balance.amount %> <%= account.balance.currency %></li>
-<% end %></ul>
+<h1 class="bitcoin-header">Admin</h1>
+<div>
+	<div class="inline">
+		<div class="account-balance-block">
+			<h2 class="label-header">Vault Balance:</h2>
+			<h4 class="bitcoin-info">		<% @accounts.each do |account| %>
+			<li class="vault-balance">
+				<%= account.balance.amount %> <%= account.balance.currency %>
+			</li>
+			<% end %>
+			</h4>
+		</div>
+		<div class="account-balance-block">
+			<h2 class="label-header">Primary Payment Method:</h2>
+			<ul>
+				<li class="bitcoin-info">Name: <%= @client.payment_methods.first.name %></li>
+			</ul>
+		</div>
+	<div class="account-balance-block">
+		<h2 class="label-header">Current Exchange Rate:</h2>
+		<h4 class="bitcoin-info">$<%= @price.amount %> <%= @price.currency %>
+		</h4>
+	</div>
+	</div>
+	<div class="account-balance">
+		<h2 class="label-header">Transactions</h2>
+		<% @accounts.each do |account| %>
 
-<h2>Primary Account:</h2><%= @client.primary_account.name %>
+		<h3 class="bitcoin-info"><%= account.name %>:</h3>
+		<ul class="bitcoin-info">
+			<% account.transactions.each do |transaction| %>
+				<li class="bitcoin-info"><%= transaction.amount.amount %> <%= transaction.amount.currency %>, <%= transaction.status %></li>
+			<% end %>
+		</ul>
 
-<h2>Primary Payment Method:</h2>
-<ul>
-	<li>Name: <%= @client.payment_methods.first.name %></li>
-</ul>
+		<% end %>
 
+	</div>
 
-<h2>Transactions</h2>
-<% @accounts.each do |account| %>
-
-<h3><%= account.name %>:</h3>
-<ul>
-	<% account.transactions.each do |transaction| %>
-		<li><%= transaction.amount.amount %> <%= transaction.amount.currency %>, <%= transaction.status %></li>
-	<% end %>
-</ul>
-
-<% end %>
-
-Price per bitcoin: $<%= @price.amount %> <%= @price.currency %>
+</div>
 
 <!-- <br>
 <form action='/bitcoin_exchanges' method='post'>
@@ -33,3 +48,4 @@ Price per bitcoin: $<%= @price.amount %> <%= @price.currency %>
 	<input type='submit' value='Buy Bitcoin'>
 </form>
  -->
+ </div>

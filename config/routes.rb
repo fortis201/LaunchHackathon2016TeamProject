@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'login'   => 'sessions#new'
   post 'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-
+  get 'admin' => "bitcoin_exchanges#index"
   resources :bitcoin_exchanges
   resources :vendors do
     collection do
@@ -13,23 +13,13 @@ Rails.application.routes.draw do
     end
   end
 
-  post '/generate' => 'verifications#generate_code'
-  post '/verify' => 'verifications#verify_code'
   
   resources :bitcoin_exchanges
 
-  post 'payment' => 'bitcoin_exchanges#payment'
-  
-  get 'checkout' => 'bitcoin_exchanges#checkout'
-  get 'payment' => 'bitcoin_exchanges#payment'
-  # get 'braintree/create'
-  # get 'braintree/edit'
-  # get 'braintree/update'
-  # get 'braintree/destroy'
-  # get 'braintree/getClientToken'
-  # get 'braintree/config'
-  # get 'payments/create'
-  # get 'payments/edit'
-  # get 'payments/update'
-  # get 'payments/destroy'
+  post '/generate' => 'verifications#generate_code'
+  post '/verify' => 'verifications#verify_code'
+  post '/payment' => 'bitcoin_exchanges#payment'
+  get '/checkout' => 'bitcoin_exchanges#checkout'
+
+  get 'documentation' => 'bitcoin_exchanges#documentation'
 end

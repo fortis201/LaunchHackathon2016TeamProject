@@ -2,7 +2,7 @@ require 'coinbase/wallet'
 
 class BitcoinExchangesController < ApplicationController
 	skip_before_filter :verify_authenticity_token, :only => :payment
-	before_action :set_client
+	before_action :set_client, :set_braintree
 
 	rescue_from Timeout::Error, :with => :rescue_from_timeout
 	
@@ -15,11 +15,18 @@ class BitcoinExchangesController < ApplicationController
 	end
 
   def checkout
+  end
+
+  def sendPaymentForm
+  	render :file => 'path/to/file.js.erb'
+  end
+
+  def set_braintree
     Braintree::Configuration.environment = :sandbox
-    Braintree::Configuration.merchant_id = "8myzxsgwhfpcrd9p"
-    Braintree::Configuration.public_key = "6hq8pv5sxfrhshcg"             
-    Braintree::Configuration.private_key = "c2424239585948322c91e5da322f6da4"
-    @token = Braintree::ClientToken.generate
+    Braintree::Configuration.merchant_id = "8mzgzs4th8ddkks8"
+    Braintree::Configuration.public_key = "8b68q5s6f6tt96yb"             
+    Braintree::Configuration.private_key = "7ef636e41c78248848b9c6e4b492d38a"
+    @token = Braintree::ClientToken.generate  	
   end
 
   def payment
@@ -65,6 +72,9 @@ class BitcoinExchangesController < ApplicationController
   	puts 'Redirecting to {callback}.'
 
 		redirect_to bitcoin_exchanges_path(@bitcoin_exchange)
+  end
+
+  def documentation
   end
 
 
