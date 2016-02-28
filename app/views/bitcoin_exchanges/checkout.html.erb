@@ -3,8 +3,9 @@
 <div id="pay"></div>
 
 <%= javascript_include_tag 'paymentForm' %>
-<script type='text/javascrpt'>
-	renderPaymentModal('pay', 100, 'USD');
+<script type='text/javascript'>
+console.log('fuk');
+	renderPaymentModal('pay', <%= @amount %>, 'USD');
 </script>
 
 
