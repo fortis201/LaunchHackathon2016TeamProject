@@ -4,7 +4,6 @@ class PosController < ApplicationController
   def create
   	session[:invoice] = params[:amount]
   end
-
   def posCheckout
   	
   end
