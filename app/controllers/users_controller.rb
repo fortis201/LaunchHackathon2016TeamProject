@@ -5,9 +5,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    puts "\n\n\n\n\n\n"
-    puts params[:amount]
-    puts "\n\n\n\n\n\n"
     session[:invoice] = params[:amount]
   end
 

@@ -54,7 +54,6 @@ end
 
 gem 'quickbooks-ruby'
 gem 'oauth-plugin'
-gem 'rails_admin'
 # gem 'paypal-sdk-rest'
 
 # gem 'devise'
