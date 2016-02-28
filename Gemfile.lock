@@ -37,6 +37,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    bcrypt (3.1.7)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     braintree (2.58.0)
@@ -50,12 +51,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-<<<<<<< HEAD
-    concurrent-ruby (1.0.1)
-=======
     coinbase (4.1.0)
-    concurrent-ruby (1.0.0)
->>>>>>> 7f864b77d5bddfd94095ee824945fd03c1c71d41
+    concurrent-ruby (1.0.1)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
@@ -170,16 +167,13 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
-<<<<<<< HEAD
-=======
     wepay (0.2.2)
-    xml-simple (1.1.5)
->>>>>>> a356bf5212536f23686e108bc0423e1f6c2b173c
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.7)
   braintree
   byebug
   coffee-rails (~> 4.1.0)
