@@ -1,9 +1,12 @@
 require 'coinbase/wallet'
 
 class BitcoinExchangesController < ApplicationController
-	skip_before_filter :verify_authenticity_token, :only => :payment
-	before_action :set_client, :set_braintree
-	rescue_from Timeout::Error, :with => :rescue_from_timeout
+  skip_before_filter :verify_authenticity_token, :only => :payment
+  before_action :set_client, :set_braintree
+  rescue_from Timeout::Error, :with => :rescue_from_timeout
+  allow_cors :index, :payment, :set_braintree
+
+
 	
 	def index
 		@accounts = @client.accounts
@@ -16,11 +19,16 @@ class BitcoinExchangesController < ApplicationController
   def documentation
   end
 
+
   def sendPaymentForm
   	puts '/n/n/n/n'
   	puts 'attempting to send javascript file...'
   	puts '/n/n/n/n'
-  	render js: "paymentForm.js.erb"
+    #"#{RAILS_ROOT}/app/assets/javascripts/paymentForm.js.erb"
+
+    send_file Rails.root.join('app','assets','javascripts','paymentForm.js.erb'), filename: 'sendPaymentForm.js', type: 'text/javascript', disposition: 'inline'
+    # send_data('', :type => 'text/javascript', :filename => 'paymentForm.js', :disposition => 'inline' )
+  	# render 'sendPaymentForm.js.erb'
   end
 
   def set_braintree
