@@ -17,15 +17,14 @@ Rails.application.routes.draw do
     end
   end
 
-  post 'payment' => 'bitcoin_exchanges#payment'
-  
-  get 'checkout' => 'bitcoin_exchanges#checkout'
-  get 'payment' => 'bitcoin_exchanges#payment'
-  
   get 'login' => 'vendors#login'
   
   resources :bitcoin_exchanges
 
+  post 'payment' => 'bitcoin_exchanges#payment'
+  
+  get 'checkout' => 'bitcoin_exchanges#checkout'
+  get 'payment' => 'bitcoin_exchanges#payment'
   get 'braintree/create'
   get 'braintree/edit'
   get 'braintree/update'
