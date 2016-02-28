@@ -1,15 +1,15 @@
+<%= render partial: "partials/header" %>
 <div id="usersIndex">
 	<!-- Banner -->
 	<section id="banner">
 		<div class="inner">
 			<header>
-				<h2>TWENTY</h2>
+				<%= image_tag ('Launch hackathon.png'), {:width => "200"} %>
 			</header>
-			<p>This is <strong>Twenty</strong>, a free
+			<p>All of our transactions <br>are a dollar, or less.
 			<br />
-			responsive template
-			<br />
-			by <a href="http://html5up.net">HTML5 UP</a>.</p>
+			Much Wow.
+			</p>
 			<footer>
 				<ul class="buttons vertical">
 					<li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
@@ -22,15 +22,12 @@
 	<article id="main">
 		<header class="special container">
 			<span class="icon fa-bar-chart-o"></span>
-			<h2>As this is my <strong>twentieth</strong> freebie for HTML5 UP
+			<h2>As this is the <strong>twenty-first</strong> century we thought 
 			<br />
-			I decided to give it a really creative name.</h2>
-			<p>Turns out <strong>Twenty</strong> was the best I could come up with. Anyway, lame name aside,
+			it was time to start banking like it was.</h2>
+			<p>Turns out banking was started during the time of the Romans, and not much has changed.
 			<br />
-			it's minimally designed, fully responsive, built on HTML5/CSS3/<strong>skel</strong>,
-			and, like all my stuff,
-			<br />
-			released for free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0</a> license. Have fun!</p>
+			It first started off with loans while deposits and currency exchanging following close suite.
 		</header>
 
 		<!-- One -->
@@ -38,24 +35,25 @@
 			<div class="row 50%">
 				<div class="8u 12u(narrower)">
 					<header>
-						<h2>Behold the <strong>icons</strong> that visualize what you’re all about. or just take up space. your call bro.</h2>
+						<h2>Behold, Dollar Bank Club. We are doing bank transactions for a dollar or 1% of your transaction, whichever is less.</h2>
 					</header>
-					<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu comteger ut fermentum lorem. Lorem ipsum dolor sit amet. Sed tristique purus vitae volutpat ultrices. eu elit eget commodo. Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo.</p>
+					<p>Through Bitcoin technology we are able to do transactions at a fraction of the cost of these big banks. Bitcoin harnesses blockchain technology that is mathematically secure and shows all the transactions since its inception. Notice how secure it is based on the locks on the right. Six. </p>
 					<footer>
 						<ul class="buttons">
-							<li><a href="#" class="button">Find Out More</a></li>
+							<li><a href="#second" class="button fit scrolly">Find Out More</a></li>
 						</ul>
 					</footer>
 				</div>
 				<div class="4u 12u(narrower) important(narrower)">
 
 					<ul class="featured-icons">
-						<li><span class="icon fa-clock-o"><span class="label">Feature 1</span></span></li>
-						<li><span class="icon fa-volume-up"><span class="label">Feature 2</span></span></li>
-						<li><span class="icon fa-laptop"><span class="label">Feature 3</span></span></li>
-						<li><span class="icon fa-inbox"><span class="label">Feature 4</span></span></li>
 						<li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
-						<li><span class="icon fa-cog"><span class="label">Feature 6</span></span></li>
+						<li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
+						<li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
+						<li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
+						<li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
+						<li><span class="icon fa-lock"><span class="label">Feature 5</span></span></li>
+
 					</ul>
 
 				</div>
@@ -63,36 +61,37 @@
 		</section>
 
 		<!-- Two -->
-		<section class="wrapper style1 container special">
+		<section id="second" class="wrapper style1 container special">
+			<h1 class="large-font">How does it work?</h1>
 			<div class="row">
 				<div class="4u 12u(narrower)">
 					<section>
-						<span class="icon featured fa-check"></span>
+						<%= image_tag ("credit.jpg"), { :width => "250" } %>
 						<header>
-							<h3>This is Something</h3>
+							<h3>1. Customers Pay as normal</h3>
 						</header>
-						<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+						<p>This gives customers the regular interface that they are comfortable with, without having to pay in bitcoins or cause any confusions.</p>
 					</section>
 				</div>
 
 				<div class="4u 12u(narrower)">
 
 					<section>
-						<span class="icon featured fa-check"></span>
+						<%= image_tag ("bitcoin.png"), { :width => "125" } %>
 						<header>
-							<h3>Also Something</h3>
+							<h3>2. We Convert it into bitcoin</h3>
 						</header>
-						<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+						<p>We deal with the card transactions and convert it directly into bitcoin without the hastle of banks. Receive your money almost instantly with the lowest fees!</p>
 					</section>
 				</div>
 
 				<div class="4u 12u(narrower)">
 					<section>
-						<span class="icon featured fa-check"></span>
+						<%= image_tag ("vendor.jpg"), { :height => "125" } %>
 						<header>
-							<h3>Probably Something</h3>
+							<h3>3. Pay your vendors</h3>
 						</header>
-						<p>Sed tristique purus vitae volutpat ultrices. Aliquam eu elit eget arcu commodo suscipit dolor nec nibh. Proin a ullamcorper elit, et sagittis turpis. Integer ut fermentum.</p>
+						<p>You're now able to pay vendors and suppliers in bitcoin, or convert it into any currency that you need. Have to purchase a mail order bride? Currency is no longer an issue!</p>
 					</section>
 				</div>
 			</div>
@@ -101,7 +100,7 @@
 		<!-- Three -->
 		<section class="wrapper style3 container special">
 			<header class="major">
-				<h2>Next look at this <strong>cool stuff</strong></h2>
+				<h2>Are you Convinced yet?</h2>
 			</header>
 
 			<div class="row">
@@ -109,9 +108,9 @@
 					<section>
 						<a href="#" class="image featured"><img src="assets/pic01.jpg" alt="" /></a>
 						<header>
-							<h3>A Really Fast Train</h3>
+							<h3>Merchants</h3>
 						</header>
-						<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
+						<p>A fast, easy and secure payment system that raises your bottom line and raises your revenue with a new way to reach your customers. You no longer have to haul dufflebags full of cash to pay the IRS or vendors.</p>
 					</section>
 				</div>
 
@@ -119,9 +118,9 @@
 					<section>
 						<a href="#" class="image featured"><img src="<%= image_path 'pic02.jpg' %>" alt="" /></a>
 						<header>
-							<h3>An Airport Terminal</h3>
+							<h3>Developer</h3>
 						</header>
-						<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
+						<p>We have made it as easy as possible for you to integrate our payment system. Simply folow the link to copy and paste our widget to your checkout, or integrate our POS system! You can log in and get started immediately.</p>
 					</section>
 				</div>
 			</div>
@@ -131,9 +130,9 @@
 					<section>
 						<a href="#" class="image featured"><img src="assets/pic03.jpg" alt="" /></a>
 						<header>
-							<h3>Hyperspace Travel</h3>
+							<h3>Customer</h3>
 						</header>
-						<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
+						<p>Allows have the exact payment and never have to worry about getting change or not having enough. It keeps it convenient to order online and just have your products dropped off discretely.</p>
 					</section>
 				</div>
 
@@ -141,16 +140,16 @@
 					<section>
 						<a href="#" class="image featured"><img src="assets/pic04.jpg" alt="" /></a>
 						<header>
-							<h3>And Another Train</h3>
+							<h3>Suppliers</h3>
 						</header>
-						<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
+						<p>You will be able to accept payments from merchants and be unafraid with meeting no merchants for the first time. Pedal your wares with confidence without fearing your life! You can also pay your taxes without having a bank account.</p>
 					</section>
 				</div>
 			</div>
 
 			<footer class="major">
 				<ul class="buttons">
-					<li><a href="#" class="button">See More</a></li>
+					<li><a href="#" class="button">Get Started</a></li>
 				</ul>
 			</footer>
 		</section>
@@ -171,6 +170,7 @@
 		</footer>
 	</section>
 </div>
+        <%= render partial: "partials/footer" %>
 
 <!-- Scripts -->
 	<script src="assets/jquery.min.js"></script>
