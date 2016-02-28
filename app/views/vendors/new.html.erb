@@ -1,5 +1,43 @@
 <h1>New Vendor</h1>
 
-<%= render 'form' %>
+<form action="/vendors" method="post">
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+	<div>
+		<label>First Name</label>
+		<input type="text" name="vendor[firstName]" placeholder="First Name">
+	</div>
 
-<%= link_to 'Back', vendors_path %>
+	<div>
+		<label>Last Name</label>
+		<input type="text" name="vendor[lastName]" placeholder="Last Name">
+	</div>
+
+	<div>
+		<label>Email</label>
+		<input type="email" name="vendor[email]" placeholder="Email">
+	</div>
+
+	<div>
+		<label>Business Name</label>
+		<input type="text" name="vendor[businessName]" placeholder="Business Name (Optional)">
+	</div>
+
+	<div>
+		<label>Wallet ID</label>
+		<input type="integer" name="vendor[walletID]" placeholder="Wallet ID">
+	</div>
+
+	<div>
+		<label>Password</label>
+		<input type="password" name="vendor[password]" placeholder="Password">
+	</div>
+
+	<div>
+		<label>Password Confirmation</label>
+		<input type="password" name="vendor[password_confirmation]" placeholder="Password Confirmation">
+	</div>
+
+	<button>Submit</button>
+</form>
+
+
