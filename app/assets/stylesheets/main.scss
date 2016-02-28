@@ -866,7 +866,6 @@
 		background-repeat: no-repeat;
 		background-size: $pattern-background-size;
 		padding: 7em 0;
-
 		> :last-child {
 			margin-bottom: 0;
 		}
@@ -1600,4 +1599,36 @@
 }
 .large-font{
 	font-size:30px;
+}
+.form-group{
+	width:400px;
+}
+.bitcoin-header{
+	font-size: 30px;
+}
+.account-balance{
+	border: 1px solid black;
+	display: inline-block;
+	vertical-align: top;
+	width:50%;
+	margin-left: 20px;
+}
+.account-balance-block{
+	border: 1px solid black;
+	margin-bottom: 5px;
+}
+.inline{
+	display: inline-block;
+}
+.label-header{
+	background-color: lightgray;
+	border-bottom: 1px solid gray;
+	padding:10px;
+}
+.bitcoin-info{
+	padding: 0 10px;
+	text-decoration: none;
+}
+.vault-balance{
+	text-decoration: none;
 }

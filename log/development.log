@@ -22726,3 +22726,611 @@ Migrating to CreateVerifications (20160228114928)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 
+
+
+Started GET "/bitcoin_exchanges" for ::1 at 2016-02-28 09:34:51 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BitcoinExchangesController#index as HTML
+  Rendered bitcoin_exchanges/index.html.erb within layouts/application (2958.8ms)
+Completed 200 OK in 16318ms (Views: 15071.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-02-28 09:35:07 -0800
+Processing by UsersController#index as HTML
+  Rendered partials/_header.html.erb (0.6ms)
+  Rendered users/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 236ms (Views: 234.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for ::1 at 2016-02-28 09:35:07 -0800
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "vendors"
+  [1m[36mVendor Load (0.3ms)[0m  [1mSELECT  "vendors".* FROM "vendors"  ORDER BY vendors.updated_at desc LIMIT 1[0m
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (13.5ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (15.8ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/layouts/rails_admin/_navigation.html.haml (25.2ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.7ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/layouts/rails_admin/pjax.html.haml (5.1ms)
+Completed 200 OK in 814ms (Views: 650.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/_mixins.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/_functions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/_vars.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/_skel.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/bitcoin_exchanges.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/main.self-e384d8280a204fe41cb3fb102c50dad168ceb0004344b6e751daccc063143941.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/braintree.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/ie8.self-8c7ae9bda9fe5c3b8632ebfeff1d75f99c09a6b769bef25cad10607af07416ff.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/ie9.self-0674d74c28d308a4bc7216bfbcfa06dba301f409196b4a573f6149f2aa8e9d10.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/scaffolds.self-e955b20a8f116da20219b7a333026bfeb34ef4365b00e890a70f7fe676052e68.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/modal.self-e271f94c7fba1435883233a6df9bd496fcdb35198f2caee6b7f248e465f16850.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/font-awesome.min.self-425819fd4bd54d18f5bc69a07a8e128822984f7fef523345f12dac872bea6292.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/pos.self-cf870ccd0794a9cd65010b8e85efac51289709348b3e191e8392263d4051dbd7.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/verifications.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/vendors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/font-awesome.min.css" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/rails_admin/rails_admin.self-d3f78db5ce5013d613e10c89f91905bae54a7b237c2e73d7023db9cbda635450.css?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-28 09:35:08 -0800
+
+
+Started GET "/assets/bitcoin_exchanges.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/braintree.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/ie/html5shiv.self-cee725fb18f8d3b0388afe72e9d5552615390f4a16113a5f5d9af7a2d84390e7.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery.min.self-ad66c584c2469d2bb527ba7aef5893549f1554ccc8ab3ccb43bd09ce8c3bf7a1.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery.dropotron.min.self-83696d2670d363c74497c7f92f253b2d40cab098ab9aaef2f7ddfcda1078fc73.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery.scrollgress.min.self-8962e68cfebd7dc4db8f22fe67aaed49e43ecbb902f1aed1c2dbee2f68f83f05.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/ie/respond.min.self-8306093ccce666c01dab405fac0d16596a1d1cf38aa0ba919d4831261662cdbb.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery.scrolly.min.self-a18e5b4470d92e0940929bd04e615a653c6eee78e4be62718d47edab2edfae0c.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/main.self-85fb52c6868b19605a26ee11b461c8168ddc352ee05040cf616b8120b93caf3c.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/paymentForm.self-b83326c3b233def38e6b83e3432324613f744bb7c9d7a8a6f5baf4f5402de1b9.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/pos.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/skel.min.self-d0f0985d850a5a679577e99dfd7cc7381b423f261c734ce0e48ca9992faf567d.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/util.self-11bf665dbb593e213c4477d8d16c26b3a6e1184941b713fd45055712cfc907e3.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/stylesheets/modal.css" for ::1 at 2016-02-28 09:35:09 -0800
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/modal.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/brandonin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/brandonin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/brandonin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.2ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (126.6ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (56.9ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (130.3ms)
+
+
+Started GET "/assets/vendors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/verifications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery.iframe-transport.self-9d6de1e3d97369f20a85456477db38a3d2b674761f4a252275201ec0272793a4.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.self-357a8f834a6b278f578acd51708542bff0852a75d8d583d0d761d3f387af5b4c.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery-ui/effect.self-3acdb29e7da09c8f0195b994d2f04d73bfef50dc539c84fd2c835d964d33e5c1.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery-ui/menu.self-7abc1c9401509a7e4fc609b1e461be6fd17e8116e8fda19cc59d05ba79aefb68.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery-ui/autocomplete.self-3befc48aba87cead090cfd014562b2771a662ac6d2c8197b24c08b2d9f3d9f2d.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/moment-with-locales.self-c29e385ac561ac8d380cf9a68428251c3dd6b6f0f05f6114c6ae7e8114678db8.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap-datetimepicker.self-9bf8b50ba86095fb5caaadd1ee11eaf661b3f4879f3ea5263d541e9804fd7b15.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.self-65a540a6a8e61569a39a37bd1456543ae5e5bbe48868247372bed40a1dff2bcf.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/ra.filter-box.self-7a15aaeea6101fb1e648df5848917eddd01c5c193ffae1e121224ec7e96d8647.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.self-0eadfce64f22b8e533f96e573e738fdf5af614af5729c772838b8d1383739035.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/ra.remote-form.self-6ee31242b35c47eae247621696152697683860be737fcb9fc7705305736c9370.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.self-29fedc7e0063905fecd8485d5a526f85b0d0c3f04de8416c2b56227e5b530528.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/jquery.pjax.self-aa02343d5b755c77fd76db8b2d2864cf2aebdba056b56e74b3b91f2e65207444.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/jquery_nested_form.self-d38045d10ebdd28aac44152cb451796232091957b86b47bedad1ab171a3a12cd.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.self-abecd3cd4d55ce44cbf00b87d2f612d570af5e7fe5701d05135d60f8c07e7d37.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/ra.i18n.self-725ab24c454e18d4832f68df96ec4fffa6190faed5636160923a6d1162a1a0ba.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-02-28 09:35:09 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-02-28 09:35:10 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-02-28 09:35:10 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-02-28 09:35:10 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-02-28 09:35:10 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-02-28 09:35:10 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap-typeahead.self-2621ced336904d375bef144d46edd9d304889e09c6559d64df325bbd10f4ce8a.js?body=1" for ::1 at 2016-02-28 09:35:10 -0800
+
+
+Started GET "/assets/rails_admin/bootstrap/bootstrap.self-94f59a48294d99f8d9b7632cd5a1742670c7735fe37ec7c555aab939b635fdde.js?body=1" for ::1 at 2016-02-28 09:35:10 -0800
+
+
+Started GET "/assets/rails_admin/ra.widgets.self-b707ff6592e3d3359ef77e61d1161a0370c5663c303eb0a5cec459fbf1fa7229.js?body=1" for ::1 at 2016-02-28 09:35:10 -0800
+
+
+Started GET "/assets/rails_admin/ui.self-5f1671365225e7918e5bf4cb99fc38b189e81884fb859682f79a683f41ee19b7.js?body=1" for ::1 at 2016-02-28 09:35:10 -0800
+
+
+Started GET "/assets/rails_admin/custom/ui.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-28 09:35:10 -0800
+
+
+Started GET "/assets/rails_admin/rails_admin.self-ab9f3e5c71b96d0ca434851ecacc97b0fc3a0e8d96ab171916e9d5fdd10ef15b.js?body=1" for ::1 at 2016-02-28 09:35:10 -0800
+
+
+Started GET "/assets/fontawesome-webfont-3c4a1bb7ce3234407184f0d80cc4dec075e4ad616b44dcc5778e1cfb1bc24019.woff2?v=4.5.0" for ::1 at 2016-02-28 09:35:10 -0800
+
+
+Started GET "/admin/vendor?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-02-28 09:35:21 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"vendor"}
+  [1m[35mVendor Load (0.2ms)[0m  SELECT  "vendors".* FROM "vendors"  ORDER BY vendors.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "vendors"[0m
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (121.0ms)
+Completed 200 OK in 160ms (Views: 144.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/vendor/6?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-02-28 09:35:33 -0800
+Processing by RailsAdmin::MainController#show as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"vendor", "id"=>"6"}
+  [1m[35mVendor Load (0.3ms)[0m  SELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = ?  ORDER BY "vendors"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/show.html.haml within layouts/rails_admin/pjax (4.8ms)
+Completed 200 OK in 38ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/vendor/6/show_in_app" for ::1 at 2016-02-28 09:35:39 -0800
+Processing by RailsAdmin::MainController#show_in_app as HTML
+  Parameters: {"model_name"=>"vendor", "id"=>"6"}
+  [1m[36mVendor Load (0.1ms)[0m  [1mSELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = ?  ORDER BY "vendors"."id" ASC LIMIT 1[0m  [["id", 6]]
+Redirected to http://localhost:3000/vendors/6
+Completed 302 Found in 14ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/vendors/6" for ::1 at 2016-02-28 09:35:39 -0800
+Processing by VendorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mVendor Load (0.3ms)[0m  SELECT  "vendors".* FROM "vendors" WHERE "vendors"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered vendors/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 99ms (Views: 94.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/font-awesome.min.css" for ::1 at 2016-02-28 09:35:39 -0800
+
+
+Started GET "/stylesheets/modal.css" for ::1 at 2016-02-28 09:35:40 -0800
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/modal.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/brandonin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/brandonin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/brandonin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (104.8ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.3ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (109.0ms)
+
+
+Started GET "/admin/vendor" for ::1 at 2016-02-28 09:35:43 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"vendor"}
+  [1m[36mVendor Load (0.2ms)[0m  [1mSELECT  "vendors".* FROM "vendors"  ORDER BY vendors.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "vendors"
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (24.7ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.9ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/layouts/rails_admin/_navigation.html.haml (6.6ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (1.2ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/layouts/rails_admin/pjax.html.haml (2.7ms)
+Completed 200 OK in 165ms (Views: 159.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-02-28 09:35:53 -0800
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "vendors"[0m
+  [1m[35mVendor Load (1.0ms)[0m  SELECT  "vendors".* FROM "vendors"  ORDER BY vendors.updated_at desc LIMIT 1
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (5.8ms)
+Completed 200 OK in 45ms (Views: 39.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-02-28 09:46:25 -0800
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "vendors"[0m
+  [1m[35mVendor Load (0.3ms)[0m  SELECT  "vendors".* FROM "vendors"  ORDER BY vendors.updated_at desc LIMIT 1
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (2.8ms)
+Completed 200 OK in 43ms (Views: 37.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-02-28 09:46:27 -0800
+Processing by UsersController#index as HTML
+  Rendered partials/_header.html.erb (0.0ms)
+  Rendered users/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 115ms (Views: 114.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.min.js" for ::1 at 2016-02-28 09:46:27 -0800
+
+
+Started GET "/assets/jquery.dropotron.min.js" for ::1 at 2016-02-28 09:46:27 -0800
+
+
+Started GET "/assets/jquery.scrollgress.min.js" for ::1 at 2016-02-28 09:46:27 -0800
+
+
+Started GET "/assets/jquery.scrolly.min.js" for ::1 at 2016-02-28 09:46:27 -0800
+
+
+Started GET "/assets/skel.min.js" for ::1 at 2016-02-28 09:46:27 -0800
+
+
+Started GET "/assets/util.js" for ::1 at 2016-02-28 09:46:27 -0800
+
+
+Started GET "/assets/font-awesome.min.css" for ::1 at 2016-02-28 09:46:27 -0800
+
+
+Started GET "/assets/main.js" for ::1 at 2016-02-28 09:46:27 -0800
+
+
+Started GET "/stylesheets/modal.css" for ::1 at 2016-02-28 09:46:27 -0800
+
+ActionController::RoutingError (No route matches [GET] "/stylesheets/modal.css"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/brandonin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/brandonin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/brandonin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.5ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (104.1ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.4ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (109.8ms)
+
+
+Started GET "/assets/light-bl.svg" for ::1 at 2016-02-28 09:46:28 -0800
+
+
+Started GET "/assets/overlay.png" for ::1 at 2016-02-28 09:46:28 -0800
+
+
+Started GET "/assets/light-br.svg" for ::1 at 2016-02-28 09:46:28 -0800
+
+
+Started GET "/assets/dark-tl.svg" for ::1 at 2016-02-28 09:46:28 -0800
+
+
+Started GET "/assets/banner.jpg" for ::1 at 2016-02-28 09:46:28 -0800
+
+
+Started GET "/assets/fontawesome-webfont.woff2?v=4.4.0" for ::1 at 2016-02-28 09:46:28 -0800
+
+
+Started GET "/assets/dark-tr.svg" for ::1 at 2016-02-28 09:46:28 -0800
+
+
+Started GET "/assets/dark-bl.svg" for ::1 at 2016-02-28 09:46:28 -0800
+
+
+Started GET "/assets/dark-br.svg" for ::1 at 2016-02-28 09:46:28 -0800
+
+
+Started GET "/admin/" for ::1 at 2016-02-28 09:46:29 -0800
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "vendors"[0m
+  [1m[35mVendor Load (0.2ms)[0m  SELECT  "vendors".* FROM "vendors"  ORDER BY vendors.updated_at desc LIMIT 1
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (3.3ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (5.1ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/layouts/rails_admin/_navigation.html.haml (9.9ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (1.5ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/layouts/rails_admin/pjax.html.haml (2.8ms)
+Completed 200 OK in 178ms (Views: 174.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-02-28 09:46:32 -0800
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "vendors"[0m
+  [1m[35mVendor Load (0.3ms)[0m  SELECT  "vendors".* FROM "vendors"  ORDER BY vendors.updated_at desc LIMIT 1
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (2.6ms)
+Completed 200 OK in 50ms (Views: 45.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/vendor/export?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-02-28 09:46:36 -0800
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"vendor"}
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/pjax (18.4ms)
+Completed 200 OK in 78ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/vendor/new?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-02-28 09:46:39 -0800
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"vendor"}
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/_form_field.html.haml (1.8ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/_form_field.html.haml (2.0ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/_submit_buttons.html.haml (7.5ms)
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (63.2ms)
+Completed 200 OK in 93ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/vendor/export?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-02-28 09:46:42 -0800
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"vendor"}
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/pjax (5.5ms)
+Completed 200 OK in 59ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/vendor?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-02-28 09:46:43 -0800
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"vendor"}
+  [1m[36mVendor Load (0.2ms)[0m  [1mSELECT  "vendors".* FROM "vendors"  ORDER BY vendors.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "vendors"
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (33.1ms)
+Completed 200 OK in 54ms (Views: 43.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2016-02-28 09:46:44 -0800
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "vendors"[0m
+  [1m[35mVendor Load (0.4ms)[0m  SELECT  "vendors".* FROM "vendors"  ORDER BY vendors.updated_at desc LIMIT 1
+  Rendered /Users/brandonin/.rvm/gems/ruby-2.2.1/gems/rails_admin-0.8.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (3.9ms)
+Completed 200 OK in 43ms (Views: 35.2ms | ActiveRecord: 0.6ms)

@@ -1,5 +1,5 @@
 <h1>Vendor Login</h1>
-<form action="/login" method="post">
+<form action="/login" method="post" class="form-group">
 	<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
 	<div>
 		<label>Email</label>
@@ -11,5 +11,5 @@
 		<input type="password" name="session[password]" placeholder="Password">
 	</div>
 
-	<button>Submit</button>
+	<button class="button">Submit</button>
 </form>
