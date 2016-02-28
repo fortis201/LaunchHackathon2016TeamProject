@@ -59,7 +59,20 @@ class BitcoinExchangesController < ApplicationController
 
 		account.buy({ :amount => @bitcoin_to_buy, :currency => "BTC", :payment_method => payment_method.id })
 
-		puts "\nTransferring " + @bitcoin_to_buy.to_s + "bitcoin to customer's wallet.\n"
+  	puts 'Transaction complete.'
+  	puts @transaction
+
+
+  	# TODO : save transaction
+
+  	puts 'Redirecting to {callback}.'
+
+		redirect_to bitcoin_exchanges_path(@bitcoin_exchange)
+  end
+
+  def transfer_balance_to_wallet # TODO : allow client to press button on view to transfer balance
+
+  	puts "\nTransferring " + @bitcoin_to_buy.to_s + "bitcoin to customer's wallet.\n"
 
   	@transaction = @client.primary_account.send({ 
   		:to => 'fortis201@gmail.com', 
@@ -69,9 +82,6 @@ class BitcoinExchangesController < ApplicationController
   	puts 'Transaction complete.'
   	puts @transaction
 
-  	puts 'Redirecting to {callback}.'
-
-		redirect_to bitcoin_exchanges_path(@bitcoin_exchange)
   end
 
   def documentation
