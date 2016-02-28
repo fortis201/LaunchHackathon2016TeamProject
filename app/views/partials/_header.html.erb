@@ -4,11 +4,13 @@
 	<nav id="nav">
 		<ul>
 			<% if session[:vendor_id] %>
+				<li><p class="button"><a href="documentation">Developer</a></p></li>
 				<li><%= Vendor.find_by(id: session[:vendor_id]).email %></li>
 				<li><%= link_to "Log out", logout_path, method:"delete" %></li>
 			<% else %>
-				<li><a href="/login" class="button special">Log In</a></li>
-				<li><%= link_to "Sign Up", new_vendor_path %></li>
+				<li><p class="button"><a href="documentation">Developer</a></p></li>
+				<li><p class="button"><a href="/login">Log In</a></p></li>
+				<li><p class="button"><%= link_to "Sign Up", new_vendor_path %></p></li>
 			<% end %>
 
 		</ul>

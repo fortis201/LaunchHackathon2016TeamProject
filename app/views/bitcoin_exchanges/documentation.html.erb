@@ -4,10 +4,11 @@
 <script>hljs.initHighlightingOnLoad();</script>
 
 <div class='container'>
+	<br><br><br><br>
 	<div class="row">
 	  <div class="twelve columns">
-	  	<h1>Dollar Bank Club Documentation</h1>
-	  	<h4>Accepting all currencies without transaction fees while keeping customer anonymity</h4>
+	  	<h2>DBC Documentation</h2>
+	  	<p>Accepting all currencies without transaction fees while keeping customer anonymity.</p>
 
 	  	<h2>What's up, Doc?</h2>
 			<p>Embed InDoge.js on your webpage in seconds</p>
@@ -16,7 +17,7 @@
 			<h2>What you need</h2>
 			<ol>
 				<li>A vendor account</li>
-				<li>The InDoge script</li>
+				<li>The InDoge CDN</li>
 			</ol>
 
 			<h2>How to embed InDoge</h2>
@@ -51,10 +52,10 @@
 
 			<pre>
 				<code class='html'>
-					<div id='InDoge'></div>
+					<div id='inDogeModal'></div>
 					<script src='http://indogewetrust.com/checkout'></script>
 					<script type='text/javascript'>
-						InDoge('InDoge', 20.00, 'USD');
+						inDogeModal('pay', 100, 'USD', 'yourMerchantId0292937');
 					</script>
 				</code>
 			</pre>

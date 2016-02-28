@@ -18,7 +18,11 @@ class BitcoinExchangesController < ApplicationController
   end
 
   def sendPaymentForm
+  	puts '/n/n/n/n'
+  	puts 'attempting to send javascript file...'
+  	puts '/n/n/n/n'
   	render :file => 'path/to/file.js.erb'
+
   end
 
   def set_braintree

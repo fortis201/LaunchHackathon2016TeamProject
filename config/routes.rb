@@ -21,6 +21,6 @@ Rails.application.routes.draw do
   post '/verify' => 'verifications#verify_code'
   post '/payment' => 'bitcoin_exchanges#payment'
   get '/checkout' => 'bitcoin_exchanges#checkout'
-
+  get '/getInDogeCDN' => 'bitcoin_exchanges#sendPaymentForm'
   get 'documentation' => 'bitcoin_exchanges#documentation'
 end
