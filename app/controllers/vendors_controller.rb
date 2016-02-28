@@ -4,6 +4,14 @@ class VendorsController < ApplicationController
 
     def show
         @vendor = Vendor.find(params[:id])
+
+        @transactions = @vendor.transactions
+
+        @balance = 0
+
+        @transactions.each do |transaction|
+            @balance += transaction.amount
+        end
     end
 
     def create
