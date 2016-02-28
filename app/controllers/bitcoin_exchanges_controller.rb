@@ -8,6 +8,10 @@ class BitcoinExchangesController < ApplicationController
 	def index
 		@accounts = @client.accounts
 		@price = @client.buy_price({currency: 'USD'})
+
+
+		puts @client.inspect
+
 	end
 
 	def create
@@ -24,6 +28,11 @@ class BitcoinExchangesController < ApplicationController
 
   def payment
     nonce = params[:payment_method_nonce]
+
+    puts "\n\n"
+    puts "Begining credit transaction."
+    puts "\n\n"
+
     result = Braintree::Transaction.sale(
       :amount => "11.50",
       :payment_method_nonce => nonce,
@@ -33,7 +42,7 @@ class BitcoinExchangesController < ApplicationController
     )
 
     puts "\n\n"
-    puts result.transaction.amount
+    puts 'Credit transaction successful with, value: + ' + result.transaction.amount.to_s + ' USD.'
     puts "\n\n"
 
     account = @client.primary_account
@@ -43,15 +52,21 @@ class BitcoinExchangesController < ApplicationController
 		@price = @client.buy_price({currency: 'USD'})
 		@bitcoin_to_buy = @dollars_to_exchange / @price.amount
 
+		puts "\nConducting bitcoin transaction via Coinbase.\n"
+
 		account.buy({ :amount => @bitcoin_to_buy, :currency => "BTC", :payment_method => payment_method.id })
 
-		puts "\nConducting bitcoin transaction via Coinbase\n"
+		puts "\nTransferring " + @bitcoin_to_buy.to_s + "bitcoin to customer's wallet.\n"
 
-		puts "\nTransferring bitcoin to customer wallet\n"
+  	@transaction = @client.primary_account.send({ 
+  		:to => 'srslafazan@gmail.com', 
+  		:amount => '0.001', 
+  		:currency => 'BTC' })
 
-		# TODO : transfer coins to customer's wallet
+  	puts 'Transaction complete.'
+  	puts @transaction
 
-		
+  	puts 'Redirecting to {callback}.'
 
 		redirect_to bitcoin_exchanges_path(@bitcoin_exchange)
   end
