@@ -1,6 +1,7 @@
+
+
 function renderPaymentModal ( elementId, amount, currency) {
 	console.log('now in renderPaymentModal');
-	document.write('<script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script>');
 
 	file = location.pathname.split( "/" ).pop();
 
@@ -10,11 +11,18 @@ function renderPaymentModal ( elementId, amount, currency) {
 	link.type = "text/css";
 	link.rel = "stylesheet";
 
-	document.getElementsByTagName( "head" )[0].appendChild( link );
+	var btScript = document.createElement("script");
+	btScript.type = "text/javascript";
+	btScript.src = "<script src='https://js.braintreegateway.com/js/braintree-2.21.0.min.js'></script>";
 
-	// TODO: 
-	// Make payemnt go to appropriate vendor
-	// 
+	document.getElementsByTagName("head")[0].appendChild(link);
+	// document.getElementsByTagName("head")[0].appendChild(btScript);
+
+	console.log("Braintree script has loaded.. hopefully...");
+	console.log(document.getElementsByTagName("head")[0]);
+		// console.log("DOM content has loaded");
+		// document.write('<script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script>');
+		// document.getElementsByTagName( "head" )[0].appendChild('<script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script>');
 
 	var   
 	pay = document.getElementById(elementId),
@@ -30,13 +38,11 @@ function renderPaymentModal ( elementId, amount, currency) {
 	modalBtn = "<button id='checkoutBtn'>Pay using our platform.</button>",
 	content = divOpen + formOpen + closeButton + ccInput + hiddenAmount + hiddenCurrency + submitButton + formClose + divClose + modalBtn;
 
-
-	// console.log(pay);
 	pay.innerHTML = content;
-
+	// console.log(pay.innerHTML);
 
 	// Get the modal
-	var modal = document.getElementById('formModal');
+	var modal = document.getElementById("formModal");
 
 	// Get the button that opens the modal
 	var btn = document.getElementById("checkoutBtn");
@@ -64,11 +70,8 @@ function renderPaymentModal ( elementId, amount, currency) {
 	    }
 	})
 
-	braintree.setup(
-		"<%= @token %>", 
-		"dropin", {
-	  container: "payment-form"
-	});
+	// console.log(document.getElementsByTagName("head")[0][document.getElementsByTagName("head")[0].length-1])
+
 }
 
 // renderPaymentModal('pay', 100, 'USD');

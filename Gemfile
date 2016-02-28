@@ -27,9 +27,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #braintree payment api
 gem "braintree"
 
-#wepay!!!
-gem 'wepay'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
