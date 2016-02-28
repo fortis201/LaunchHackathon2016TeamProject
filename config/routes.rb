@@ -2,7 +2,13 @@ Rails.application.routes.draw do
   get "pos" => 'pos#calculator'
 
   root 'users#index'
+
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+
   post '/create' => "users#create"
+
 
   resources :users
   resources :bitcoin_exchanges
@@ -13,6 +19,12 @@ Rails.application.routes.draw do
       get :oauth_callback
     end
   end
+
+
+  get 'login' => 'vendors#login'
+  
+  resources :bitcoin_exchanges
+
 
   post 'payment' => 'bitcoin_exchanges#payment'
   
@@ -29,6 +41,7 @@ Rails.application.routes.draw do
   get 'payments/edit'
   get 'payments/update'
   get 'payments/destroy'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
