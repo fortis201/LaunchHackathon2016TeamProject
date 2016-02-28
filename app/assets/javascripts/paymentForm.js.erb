@@ -1,4 +1,4 @@
-function renderPaymentModal ( elementId, amount, currency) {
+function renderPaymentModal ( elementId, amount, currency, merchantId) {
 	console.log('now in renderPaymentModal');
 
 	file = location.pathname.split( "/" ).pop();
@@ -22,7 +22,8 @@ function renderPaymentModal ( elementId, amount, currency) {
 	ccInput = "<div id='payment-form'></div><br>",
 	closeButton = "<span id='close'>X</span>",
 	hiddenAmount = "<input type='hidden' value=" + amount + ">",
-	hiddenCurrency = "<input type='hidden' value=" + currency + ">",	
+	hiddenCurrency = "<input type='hidden' value='" + currency + "''>",
+	hiddenVendorId = "<input type='hidden' value='" + merchantId +"'>",
 	submitButton = "<input type='submit' value='Submit'>",
 	formClose = "</form>",
 	divClose = "</div>",
@@ -77,5 +78,5 @@ function renderPaymentModal ( elementId, amount, currency) {
 	}
 }
 
-renderPaymentModal('pay', 100, 'USD');
+// renderPaymentModal('pay', 100, 'USD', '98730947sadf7a23');
 
