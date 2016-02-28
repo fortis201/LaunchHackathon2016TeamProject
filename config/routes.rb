@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get "pos" => 'pos#calculator'
+
   root 'users#index'
+  post '/create' => "users#create"
 
   resources :users
   resources :bitcoin_exchanges

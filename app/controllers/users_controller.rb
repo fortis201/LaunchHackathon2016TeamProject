@@ -2,10 +2,13 @@ class UsersController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => :payment
 
   def index
-    # @token = Braintree::ClientToken.generate
   end
 
   def create
+    puts "\n\n\n\n\n\n"
+    puts params[:amount]
+    puts "\n\n\n\n\n\n"
+    session[:invoice] = params[:amount]
   end
 
   def new
@@ -43,7 +46,7 @@ class UsersController < ApplicationController
     puts "\n\n\n\n\n\n\n"
     nonce = params[:payment_method_nonce]
     result = Braintree::Transaction.sale(
-      :amount => "100.00",
+      :amount => session[:invoice],
       :payment_method_nonce => nonce,
       :options => {
         :submit_for_settlement => true
