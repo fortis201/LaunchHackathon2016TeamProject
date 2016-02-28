@@ -30,19 +30,33 @@ class BitcoinExchangesController < ApplicationController
   end
 
   def payment
-    nonce = params[:payment_method_nonce]
+
+  	exchange_params[:amount] = '11.50' # hardcoded for test
+  	exchange_params[:currency] = 'USD' # hardcoded for test
+  	exchange_params[:vendor_id] = 1 # hardcoded for test
+  	exchange_params[:description] = 'description of the product' # currently unused
+
+  	# ensure real vendor 
+  	@vendor = Vendor.find(exchange_params[:vendor_id]); # TODO : OAuth2
+
+    nonce = params[:payment_method_nonce] # TODO : strong params for payment method nonce
 
     puts "\n\n"
     puts "Begining credit transaction."
     puts "\n\n"
 
     result = Braintree::Transaction.sale(
-      :amount => "11.50",
+      :amount => exchange_params[:amount].to_s,
       :payment_method_nonce => nonce,
       :options => {
         :submit_for_settlement => true
       }
     )
+
+    if !result or !result.transaction or !result.transaction.amount
+    	rescue_from_nil_transaction
+    	return
+    end
 
     puts "\n\n"
     puts 'Credit transaction successful with, value: + ' + result.transaction.amount.to_s + ' USD.'
@@ -62,8 +76,17 @@ class BitcoinExchangesController < ApplicationController
   	puts 'Transaction complete.'
   	puts @transaction
 
+  	tx = Transaction.new
+  	tx.vendor = @vendor
+  	tx.amount = exchange_params[:amount].to_f
+  	tx.currency = exchange_params[:currency]
+  	tx.bitcoin_bought = @bitcoin_to_buy
 
-  	# TODO : save transaction
+  	if tx.save
+  		puts 'Transaction #{tx.id} saved to database.'
+  	else
+  		puts 'Error: Transaction failed to save.'
+  	end
 
   	puts 'Redirecting to {callback}.'
 
@@ -90,6 +113,13 @@ class BitcoinExchangesController < ApplicationController
 
   protected
 
+  	def rescue_from_nil_transaction # create proper error page
+  		notice = 'Braintree transaction was nil.'
+  		puts notice
+
+  		redirect_to '/', :notice => notice
+  	end
+
 	  def rescue_from_timeout(exception)
 	    puts "timeout: "
 	    puts exception
@@ -106,7 +136,7 @@ class BitcoinExchangesController < ApplicationController
 		end
 
 		def exchange_params
-			params.require(:exchange).permit(:amount, :description)
+			params.require(:exchange).permit(:amount, :currency, :description, :vendor_id)
 		end
 
 		rescue_from Timeout::Error, :with => :rescue_from_timeout
