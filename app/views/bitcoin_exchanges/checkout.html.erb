@@ -1,14 +1,10 @@
 <h1>Checkout</h1>
-<div>
-	<form id="pay" method='POST' action='/payment'>
-		<input type='hidden' name='<%= request_forgery_protection_token.to_s %>' value='<%= form_authenticity_token %>'></input>
-	</form>
-</div>
-
+<div id='pay'></div>
 
 <script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script>
 
 <script type="text/javascript">
+console.log('hello scripy wiowerlijfsd');
 	braintree.setup(
 		"<%= @token %>", 
 		"dropin", {
