@@ -5,12 +5,31 @@ class SessionsController < ApplicationController
 	def create
 		@vendor = Vendor.find_by(email: params[:session][:email].downcase)
 
+		puts 'vendor is : '
+		puts @vendor
+
 		if @vendor && @vendor.authenticate(params[:session][:password])
+
+			puts 'vendor found and authenticated'
+
 			log_in @vendor
 			redirect_to vendor_path(@vendor)
 		else
-			redirect_to login_path
-			flash[:notice] = @vendor.errors.full_messages
+
+			puts params
+
+			puts 'something failed'
+
+			@vendor = Vendor.new
+
+			if @vendor.save
+				#success
+			else #failure
+				#redirect
+				redirect_to login_path
+				flash[:notice] = @vendor.errors.full_messages
+			end
+
 		end
 	end
 

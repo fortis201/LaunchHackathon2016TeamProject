@@ -3,18 +3,17 @@ require 'coinbase/wallet'
 class BitcoinExchangesController < ApplicationController
 	skip_before_filter :verify_authenticity_token, :only => :payment
 	before_action :set_client, :set_braintree
-
 	rescue_from Timeout::Error, :with => :rescue_from_timeout
 	
 	def index
 		@accounts = @client.accounts
 		@price = @client.buy_price({currency: 'USD'})
 	end
-
 	def create
 	end
-
   def checkout
+  end
+  def documentation
   end
 
   def sendPaymentForm
@@ -34,57 +33,79 @@ class BitcoinExchangesController < ApplicationController
   end
 
   def payment
-    nonce = params[:payment_method_nonce]
+  	# ensure real vendor 
+  	@vendor = Vendor.find(exchange_params[:vendor_id]); # TODO : OAuth2
+    puts "\n\nBegining credit transaction.\n\n"
 
-    puts "\n\n"
-    puts "Begining credit transaction."
-    puts "\n\n"
-
+    # create Braintree sale
     result = Braintree::Transaction.sale(
-      :amount => "11.50",
-      :payment_method_nonce => nonce,
+      :amount => exchange_params[:amount].to_s,
+      :payment_method_nonce => exchange_params[:payment_method_nonce],
       :options => {
         :submit_for_settlement => true
       }
     )
 
+    # error handle for Braintree sale
+    if !result or !result.transaction or !result.transaction.amount
+    	rescue_from_nil_transaction
+    	return
+    end
     puts "\n\n"
     # puts 'Payment successful! Thank you for using Dollar Bank Club!'
     puts 'Credit transaction successful with, value: #{result.transaction.amount.to_s} USD.'
     puts "\n\n"
 
+    # set instance variables
     account = @client.primary_account
 		payment_method = @client.payment_methods.first
-
 		# @dollars_to_exchange = result.transaction.amount
 		@dollars_to_exchange = 50.75
 		@price = @client.buy_price({currency: 'USD'})
 		@bitcoin_to_buy = @dollars_to_exchange / @price.amount
-
 		puts "\nConducting bitcoin transaction via Coinbase.\n"
 
+
+		# buy bitcoin via Coinbase
 		account.buy({ :amount => @bitcoin_to_buy, :currency => "BTC", :payment_method => payment_method.id })
+  	puts 'Transaction complete.'
+  	puts @transaction
 
-		puts "\nTransferring " + @bitcoin_to_buy.to_s + "bitcoin to customer's wallet.\n"
+  	# save transaction
+  	tx = Transaction.new
+  	tx.vendor = @vendor
+  	tx.amount = exchange_params[:amount].to_f
+  	tx.currency = exchange_params[:currency]
+  	tx.bitcoin_bought = @bitcoin_to_buy
+  	if tx.save
+  		puts 'Transaction #{tx.id} saved to database.'
+  	else
+  		puts 'Error: Transaction failed to save.'
+  	end
 
+  	# redirect/render
+  	puts 'Redirecting to {callback}.'
+		redirect_to bitcoin_exchanges_path(@bitcoin_exchange)
+  end
+
+  def transfer_balance_to_wallet # TODO : allow client to press button on view to transfer balance
+  	puts "\nTransferring " + @bitcoin_to_buy.to_s + "bitcoin to customer's wallet.\n"
   	@transaction = @client.primary_account.send({ 
   		:to => 'fortis201@gmail.com', 
   		:amount => '0.001', 
   		:currency => 'BTC' })
-
   	puts 'Transaction complete.'
   	puts @transaction
-
-  	puts 'Redirecting to {callback}.'
-
-		redirect_to bitcoin_exchanges_path(@bitcoin_exchange)
   end
-
-  def documentation
-  end
-
 
   protected
+
+  	def rescue_from_nil_transaction # create proper error page
+  		notice = 'Braintree transaction was nil.'
+  		puts notice
+
+  		redirect_to '/', :notice => notice
+  	end
 
 	  def rescue_from_timeout(exception)
 	    puts "timeout: "
@@ -102,7 +123,14 @@ class BitcoinExchangesController < ApplicationController
 		end
 
 		def exchange_params
-			params.require(:exchange).permit(:amount, :description)
+			# params.require(:exchange).permit(:amount, :currency, :description, :vendor_id)
+			params.require(:payment_method_nonce)
+			params[:amount] = '11.50' # hardcoded for test
+	  	params[:currency] = 'USD' # hardcoded for test
+	  	params[:vendor_id] = 9 # hardcoded for test
+	  	params[:description] = 'description of the product' # currently unused
+
+	  	return params
 		end
 
 		rescue_from Timeout::Error, :with => :rescue_from_timeout
