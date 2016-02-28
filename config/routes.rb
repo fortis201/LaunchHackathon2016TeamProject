@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'login'   => 'sessions#new'
   post 'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+
+  get 'logout' => 'sessions#destroy'
+  
   get 'admin' => "bitcoin_exchanges#index"
   get 'documentation' => "bitcoin_exchanges#documentation"
   resources :bitcoin_exchanges
