@@ -4,7 +4,6 @@ class Vendor < ActiveRecord::Base
 	validates :email, presence: true, length: { maximum: 255 },
 	                format: { with: VALID_EMAIL_REGEX },
 	                uniqueness: { case_sensitive: false }
-	validates :businessName,  presence: true
 	has_secure_password
 	validates :password,  presence: true, allow_nil: true
 
@@ -12,4 +11,6 @@ class Vendor < ActiveRecord::Base
 	def downcase_email
 		self.email = email.downcase
 	end
+
+	has_many :transactions
 end
