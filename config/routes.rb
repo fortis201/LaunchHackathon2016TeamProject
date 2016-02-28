@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
   root 'users#index'
   get "pos" => 'pos#calculator'
-
-  get    'login'   => 'sessions#new'
-  post   'login'   => 'sessions#create'
+  get 'login'   => 'sessions#new'
+  post 'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
   resources :bitcoin_exchanges
-  get 'sign_up' => 'vendors#new'
-
   resources :vendors do
     collection do
       get :authenticate
