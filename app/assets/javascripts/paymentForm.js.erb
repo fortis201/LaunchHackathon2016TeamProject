@@ -1,4 +1,4 @@
-(function paymentModal() {
+function renderPaymentModal ( elementId, amount, currency) {
 
 	document.write('<script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script>');
 
@@ -16,17 +16,19 @@
 	// Make payemnt go to appropriate vendor
 	// 
 
-	var 
-	pay = document.getElementById('pay'),
+	var   
+	pay = document.getElementById(elementId),
 	divOpen = "<div id='formModal'>",
-	closeButton = "<span id='close'>X</span>",
-	formOpen = "<div id='checkout'>",
+	formOpen = "<form method='POST' action='/payment'>",
 	ccInput = "<div id='payment-form'></div><br>",
+	closeButton = "<span id='close'>X</span>",
+	hiddenAmount = "<input type='hidden' value=" + amount + ">",
+	hiddenCurrency = "<input type='hidden' value=" + currency + ">",	
 	submitButton = "<input type='submit' value='Submit'>",
-	formClose = "</div>",
-	divClose = "</div><br>",
+	formClose = "</form>",
+	divClose = "</div>",
 	modalBtn = "<button id='checkoutBtn'>Pay using our platform.</button>",
-	content = divOpen + closeButton + formOpen + ccInput + submitButton + formClose + divClose + modalBtn;
+	content = divOpen + formOpen + closeButton + ccInput + hiddenAmount + hiddenCurrency + submitButton + formClose + divClose + modalBtn;
 
 
 	// console.log(pay);
@@ -67,7 +69,11 @@
 		"dropin", {
 	  container: "payment-form"
 	});
+}
 
+function acceptPayment (amount, currency) {
+	renderPaymentModal(amount, currency);
+};
 
+acceptPayment('pay', 100, 'USD');
 
-})()

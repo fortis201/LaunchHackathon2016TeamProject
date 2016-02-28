@@ -26,6 +26,7 @@ class UsersController < ApplicationController
   def checkout
     puts "/n/n/n/n"
     puts "in checkout"
+    puts params
     puts "/n/n/n/n"
     Braintree::Configuration.environment = :sandbox
     Braintree::Configuration.merchant_id = "8myzxsgwhfpcrd9p"
