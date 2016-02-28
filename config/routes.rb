@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "poscheckout" => "pos#checkout"
   post "pospayment" => "pos#payment"
   post "poscreate" => "pos#create"
+
   get "pos" => 'pos#calculator'
   get 'login'   => 'sessions#new'
   post 'login'   => 'sessions#create'
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get "/paymentForm.js" => "bitcoin_exchanges#sendPaymentForm"
   
   resources :bitcoin_exchanges
 

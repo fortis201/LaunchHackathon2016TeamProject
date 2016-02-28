@@ -9,7 +9,13 @@
 		<ul>
 			
 			<% if session[:vendor_id] %>
-				<li><%= Vendor.find_by(id: session[:vendor_id]).email %></li>
+				<li>
+					<% if session[:vendor_id] && Vendor.find_by(id: session[:vendor_id]) %>
+
+						<%= Vendor.find_by(id: session[:vendor_id]).email %>
+
+					<% end %>
+				</li>
 				<li><%= link_to "Developer", documentation_path, class: "button special" %></li>
 				<li><%= link_to "Log out", logout_path, method:"delete", class: "button special" %></li>
 			<% else %>
