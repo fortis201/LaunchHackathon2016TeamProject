@@ -48,13 +48,15 @@ class BitcoinExchangesController < ApplicationController
     	return
     end
     puts "\n\n"
-    puts 'Credit transaction successful with, value: + ' + result.transaction.amount.to_s + ' USD.'
+    # puts 'Payment successful! Thank you for using Dollar Bank Club!'
+    puts 'Credit transaction successful with, value: #{result.transaction.amount.to_s} USD.'
     puts "\n\n"
 
     # set instance variables
     account = @client.primary_account
 		payment_method = @client.payment_methods.first
-		@dollars_to_exchange = result.transaction.amount
+		# @dollars_to_exchange = result.transaction.amount
+		@dollars_to_exchange = 50.75
 		@price = @client.buy_price({currency: 'USD'})
 		@bitcoin_to_buy = @dollars_to_exchange / @price.amount
 		puts "\nConducting bitcoin transaction via Coinbase.\n"

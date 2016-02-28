@@ -43,8 +43,6 @@ ActiveRecord::Schema.define(version: 20160228182815) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "vendors", force: :cascade do |t|
-    t.string   "firstName"
-    t.string   "lastName"
     t.string   "email"
     t.string   "businessName"
     t.integer  "walletID"
