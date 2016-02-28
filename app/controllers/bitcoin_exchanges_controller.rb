@@ -67,6 +67,9 @@ class BitcoinExchangesController < ApplicationController
 		redirect_to bitcoin_exchanges_path(@bitcoin_exchange)
   end
 
+  def documentation
+  end
+
 
   protected
 
