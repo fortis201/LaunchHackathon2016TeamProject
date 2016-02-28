@@ -1,5 +1,5 @@
 function renderPaymentModal ( elementId, amount, currency) {
-
+	console.log('now in renderPaymentModal');
 	document.write('<script src="https://js.braintreegateway.com/js/braintree-2.21.0.min.js"></script>');
 
 	file = location.pathname.split( "/" ).pop();
@@ -71,9 +71,5 @@ function renderPaymentModal ( elementId, amount, currency) {
 	});
 }
 
-function acceptPayment (amount, currency) {
-	renderPaymentModal(amount, currency);
-};
-
-acceptPayment('pay', 100, 'USD');
+// renderPaymentModal('pay', 100, 'USD');
 
