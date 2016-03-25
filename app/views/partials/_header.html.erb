@@ -6,24 +6,20 @@
 	<% end %>
 	
 	<nav id="nav">
-		<ul>
-			
+		<ul>			
 			<% if session[:vendor_id] %>
 				<li>
 					<% if session[:vendor_id] && Vendor.find_by(id: session[:vendor_id]) %>
-
-						<%= Vendor.find_by(id: session[:vendor_id]).email %>
-
+						<span style='color: black;'><%= Vendor.find_by(id: session[:vendor_id]).email %><span>
 					<% end %>
 				</li>
 				<li><%= link_to "Developer", documentation_path, class: "button special" %></li>
-				<li><%= link_to "Log out", logout_path, method:"delete", class: "button special" %></li>
+				<li><%= link_to "Log out", logout_path, class: "button special" %></li>
 			<% else %>
 				<li><%= link_to "Developer", documentation_path, class: "button special" %></li>
 				<li><a href="/login" class="button special">Log In</a></li>
 				<li><%= link_to "Sign Up", new_vendor_path, class: "button special" %></li>
 			<% end %>
-
 		</ul>
 	</nav>
 </header>

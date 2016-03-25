@@ -2,11 +2,28 @@
 	<div class="row">
 		<div class="8u">
 			<h2>My Account</h2>
+			<p>Wallet Address: sk23k124dskj2l1jj1sjk1</p>
+
+			<h2>Transactions</h2>
+
+			<ul>
+				<% @transactions.each do |transaction| %>
+
+					<li>
+						<%= transaction.id %>: 
+						$<%= transaction.amount %> <%= transaction.currency %>
+					</li>
+
+				<% end %>
+
+			</ul>
 		</div>
 
 		<div class="4u">
 			<h2>Account Balance</h2>
+			$<%= @balance %>
 		</div>
+		<button class='button button-primary'>Withdraw</button>
 	</div>
 
 	<div class="row">
