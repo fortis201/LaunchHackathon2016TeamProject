@@ -10,6 +10,7 @@
 			<% if session[:vendor_id] %>
 				<li>
 					<% if session[:vendor_id] && Vendor.find_by(id: session[:vendor_id]) %>
+						<a style="color: black;"href="/pos">Point of Sale</a>
 						<span style='color: black;'><%= Vendor.find_by(id: session[:vendor_id]).email %><span>
 					<% end %>
 				</li>

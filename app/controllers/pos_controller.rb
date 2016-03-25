@@ -13,9 +13,7 @@ class PosController < ApplicationController
   	@amount = session[:invoice]
   end
   def payment
-  	puts "\n\n\n\n\n\n"
-  	puts params
-  	puts "\n\n\n\n\n\n"
-  	redirect_to "/pos"
+  	Transaction.create(vendor_id: session[:vendor_id], amount: params[:amount], currency: "USD")
+  	redirect_to vendor_path(session[:vendor_id])
   end
 end
